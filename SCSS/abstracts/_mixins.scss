@@ -1,0 +1,22 @@
+/* Asigna Margin y Padding */
+@mixin myp ($margin, $padding){ /*Mixin de Margin y Padding*/
+    margin: $margin;
+    padding: $padding;
+} 
+
+/* Asignar Height y Width */
+@mixin hyw ($height, $width){ /*Mixin de Height y Width*/
+    height: $height;
+    width: $width;
+} 
+
+/*Mixin de estilos de vértices radiales*/
+@mixin borderCreator ($border-top-left-radius,
+                      $border-top-right-radius,
+                      $border-bottom-right-radius,
+                      $border-bottom-left-radius){
+    border-top-left-radius: $border-top-left-radius;
+    border-top-right-radius: $border-top-right-radius;
+    border-bottom-right-radius: $border-bottom-right-radius;
+    border-bottom-left-radius: $border-bottom-left-radius;    
+} 

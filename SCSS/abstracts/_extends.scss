@@ -1,0 +1,19 @@
+/* Extend de estilos de botones */
+%button {
+    background-color: $colorPrincipal;
+    border: $colorPrincipal;    
+    border-radius: 5px; /* Corrige el radius del framework */
+    border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+    border-bottom-left-radius: 15px;
+}
+%button:hover {
+    opacity: 0.6;
+    transition: opacity 0.5s ease; 
+}   
+    %button:active { 
+        /* Transparenta y cambia color de borde y fuente */
+    background-color: transparent;
+    border: 1px solid#F58700;
+    color: #F58700;
+    box-shadow: $shadowButton; 
+    }

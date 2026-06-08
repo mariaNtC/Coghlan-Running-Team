@@ -1,0 +1,28 @@
+/* ------------------------------- ESTILOS DE LA HTML PRÓXIMA WEB ------------------------------- */  
+.bg-body-customProx {
+    /* Cambia el color del Body */
+    background-color: $colorPrincipal;
+  }
+
+  .proxMain {
+    .proxImgCont {
+        /* Para centrar la imágen */
+        display: flex;
+        justify-content: center;
+
+        .proxImg {
+            margin: 80px; /* Espaciado de la imagen */
+        }
+    }
+
+  .proxH1 {
+    background-color: transparent; /* Estilos del h1 */
+    }
+
+  .proxH2 {
+    /* Estilos del h2 */
+    background-color: transparent;    
+    font-size: medium;
+    margin-bottom: 200px;
+    }    
+  }

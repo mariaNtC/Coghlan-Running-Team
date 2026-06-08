@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Tienda oficial de Coghlan Running Team. Membresías, indumentaria y artículos deportivos.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Coghlan Running Team | Tienda</title>
+    <!-- Favico -->
+    <link rel="shortcut icon" href="../images/favico.ico" type="image/x-icon">
+    <!-- Estilos -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- Bootstrap Framework -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">   
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Toastify JS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Link de animaciones 'Animate.css' -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    
+</head>
+
+<body class="bg-body-custom">
+
+    <header>
+        <!-- Navegador con logo -->    
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+              <!-- Logo con link a Index -->  
+              <div class="indexLogoLink animate__animated animate__bounceInLeft">
+                <a href="../index.html">
+                  <img src="../images/logoW2.webp" alt="logoCRT">
+                </a>
+              </div>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav animate__animated animate__fadeInRight">
+                  <li class="nav-item">
+                    <a class="nav-link"  href="../index.html">INICIO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../page/nosotros.html">NOSOTROS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../page/eventos.html">EVENTOS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../page/galeria.html">GALERIA</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../page/contacto.html">CONTACTO</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active navTienda" href="../page/tienda.html">TIENDA</a>
+                  </li>                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    
+    </header>
+    
+    <aside class="aside">
+        <div class="asideBox">
+            
+            <div class="asideBoxIcon">
+                <a href="#membresias" class="iconAsideBox">
+                    <img loading="lazy" src="../images/iconIdAside.webp" class="img-fluid iconImgAsideBox" alt="Suscripción">
+                    MEMBRESÍA
+                </a>
+            </div>
+            
+            <div class="asideBoxIcon">
+                <a href="#indumentaria" class="iconAsideBox">
+                    <img loading="lazy" src="../images/iconRemeraAside.webp" class="img-fluid iconImgAsideBox" alt="Indumentaria">
+                    INDUMENTARIA
+                </a>
+            </div>
+            <div class="asideBoxIcon">
+                <a href="#articulos" class="iconAsideBox">
+                    <img loading="lazy" src="../images/iconBotellaAside.webp" class="img-fluid iconImgAsideBox" alt="Varios">
+                    ARTÍCULOS
+                </a>
+            </div>
+           
+        </div>
+    </aside>    
+
+    <main class="mainTienda">   
+          <!-- Sección sueperior con datos del carrito --> 
+        <h2 class="carritoDatosComprados"> 
+
+            <div class="contenedorPrueba">
+                 <!-- Datos de los prodcutos del mismoi tipo --> 
+                <div class="carritoPyCContainer">
+                    <div class="carritoProductosCompradosContainer">
+                        <p class="descCarritoProductosComprados animate__animated animate__fadeIn">Productos comprados:</p>
+                        <p id="productosFinalDOM" class="carritoProductosComprados animate__animated animate__fadeIn">0</p>
+                    </div>
+                 <!-- Sección sueperior con datos del carrito --> 
+                    <div class="carritoCantidadCompradosContainer">
+                        <p class="descCarritoCantidadComprados animate__animated animate__fadeIn">Cantidad de productos:</p>
+                        <p id="cantidadFinalDOM" class="carritoCantidadComprados animate__animated animate__fadeIn">0</p>
+                    </div>
+
+                    <div class="carritoMembresiaCompradosContainer">
+                        <p class="descCarritoMembresiaComprados animate__animated animate__fadeIn">Membresía:</p>
+                        <p id="membresiaFinalDOM" class="carritoMembresiaComprados animate__animated animate__fadeIn"></p>
+                    </div>
+                </div>
+
+                <div class="carritoTotalContainer">
+                    <div class="carritoTotalCompradosContainer">                
+                        <p class="descCarritoTotalComprados animate__animated animate__fadeIn">COSTO TOTAL</p>
+                        <p id="costoFinalDOM" class="carritoTotalComprados animate__animated animate__fadeIn">0</p>
+                    </div>
+                    
+
+                    <div class="botonesAbonarVaciarContainer">
+                        <div class="abonarCarritoContainer">
+                            <button id="abrirCarritoTOP" class="abrirCarritoBtn" aria-label="Ver carrito">
+                                <img loading="lazy" src="../images/abonarTienda.webp" class="img-fluid iconBotonAbonar" alt="Abonar">
+                                <p class="textAbonar">CARRITO</p>
+                            </button>
+                        </div>
+
+                        <div class="vaciarCarritoContainer" >
+                            <button id="vaciarCarritoTOP" class="vaciarCarritoBtn" aria-label="Vaciar carrito">
+                                <img loading="lazy" src="../images/tachoTienda.webp" class="img-fluid iconBotonVaciar" alt="Vaciar">
+                                <p class="textQuitar">VACIAR</p>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="userTiendaContainer" style="display:none;">
+
+                    <img loading="lazy" src="../images/userTienda.webp" class="img-fluid tiendaImg imgAvatarTienda" alt="Varios">
+                    <a class="loginBoton" href="#">Ingresar</a>
+                    <a class="registrarBoton" href="#">Registrarse</a>
+    
+                </div>
+                
+            </div>
+
+
+           
+            
+        </h2>
+
+       <!------------------------------------ POP OVERS -------------------------------------->
+
+
+       <!-- Popover para confirmación de pagar carrito -->
+       <div id="popoverPagarCarrito" class="popoverPagarCarrito animate__animated animate__fadeIn">
+        <div class="popover-inner">
+            <div class="popover-body">
+                ¿Deseas comprar los productos el carrito?
+                <div class="mt-2">
+                    <button id="confirmarPagoCarritoBtn" class="btn-primary btn botonConfirmarPago">Confirmar</button>
+                    <button id="cancelarPagoCarritoBtn" class="btn-secondary btn botonCancelarPago">Cancelar</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <!-- Popover para confirmación de vaciar carrito -->
+    <div id="popoverVaciarCarrito" class="popoverVaciarCarrito animate__animated animate__fadeIn">
+        <div class="popover-inner">
+            <div class="popover-body">
+                ¿Estás seguro de que deseas vaciar el carrito?
+                <div class="mt-2">
+                    <button id="confirmarVaciarCarritoBtn" class="btn-primary btn botonConfirmarVaciado">Confirmar</button>
+                    <button id="cancelarVaciarCarritoBtn" class="btn-secondary btn botonCancelarVaciado">Cancelar</button>
+                </div>
+            </div>
+        </div>  
+    </div>
+    
+
+    <!------------------------------------ FIN POP OVERS -------------------------------------->
+
+
+        <h1 class="h1Tienda animate__animated animate__fadeInUp">TIENDA</h1>  
+
+           
+    <!------------------------------------ SECCIÓN MEMBRESÍAS -------------------------------------->      
+
+        <h2 id="membresias" class="h2Membresias">
+            <img loading="lazy"  class="animate__animated animate__tada" src="../images/iconIdAside.webp" alt="Membresías"> 
+            <p class="tiendaIconH2 animate__animated animate__fadeIn">MEMBRESÍAS</p>
+        </h2>   
+        
+    
+        <div id="productosMembresias">
+            <!-- Aquí se renderizarán dinámicamente los productos de membresía DEL js-->
+        </div>       
+
+    <!------------------------------------ FINAL SECCIÓN MEMBRESÍAS -------------------------------------->   
+     
+    
+    <!------------------------------------ SECCIÓN INDUMENTARIA -------------------------------------->   
+
+        <h2 id="indumentaria" class="h2Indumentaria"><img loading="lazy"  class="animate__animated animate__tada" src="../images/iconRemeraAside.webp" alt="Indumentaria"> 
+            <p class="tiendaIconH2 animate__animated animate__fadeIn">INDUMENTARIA</p>
+        </h2> 
+         
+
+        <div id="productosIndumentaria">
+            <!-- Aquí se renderizarán dinámicamente los productos de membresía -->
+        </div>      
+         
+        
+       <!------------------------------------ FINAL SECCIÓN INDUMENTARIA -------------------------------------->   
+
+
+        <!------------------------------------ SECCIÓN ARTÍCULOS -------------------------------------->   
+
+        <h2 id="articulos" class="h2Articulos"><img loading="lazy"  class="animate__animated animate__tada" src="../images/iconBotellaAside.webp" alt="Artículos"> 
+            <p class="tiendaIconH2 animate__animated animate__fadeIn">ARTÍCULOS</p>
+        </h2> 
+
+
+        <div id="productosArticulos">
+            <!-- Aquí se renderizarán dinámicamente los productos de artículos -->
+        </div> 
+
+        <!------------------------------------ FINAL SECCIÓN ARTICULOS -------------------------------------->   
+
+
+
+
+         <!------------------------------------ ICONO FLOTANTE PARA ABRIR EL CARRO -------------------------------------->   
+        <div class="iconoCarrito animate__animated animate__fadeInUp" id="iconoCarrito" role="button" aria-label="Abrir carrito">
+            <img loading="lazy" src="../images/abonarTienda.webp" alt="Carrito">
+        </div>
+         <!------------------------------------ FINAL ICONO FLOTANTE PARA ABRIR EL CARRO -------------------------------------->   
+
+
+        <!-------------------------------------- MODAL DEL CARRO --------------------------------->
+        <div class="modalCarrito animate__animated animate__fadeIn" id="modalCarrito">
+            
+            <div class="modalContenido">
+                <h2 class="h2Modal">
+                    <img loading="lazy"  class="animate__animated animate__tada" src="../images/abonarTienda.webp" alt="Carrito"> 
+                    <p class="tiendaIconH2 animate__animated animate__fadeIn">PRODUCTOS DEL CARRITO</p>
+                </h2>  
+                <div class="modalContenidoTextos">               
+                    
+                        <div id="carrito">
+                            <!-- Aquí se generará el contenido del carrito por JS -->     
+                                               
+                        </div>
+                    
+                </div>
+    
+                <hr>
+                <p class="carritoModalPrecioFinal">PRECIO FINAL</p> 
+                    <p id="costoFinalModal" class="carritoModalPrecioTotal"></p>     
+    
+    
+                    <div class="contenedorBotonesModal">
+                        <button class="pagarBoton" id="pagarCarrito">PAGAR</button>            
+                        <button class="vaciarCarritoBtn" id="vaciarCarrito"><img loading="lazy" class="vaciarCarritoImgBtn" src="../images/tachoTienda.webp" class="img-fluid tachoTienda" alt="Quitar"></button>
+                    </div>
+                    
+                <button class="botonCerrarModal" id="botonCerrarModal">CERRAR</button>
+    
+                
+               
+             </div>
+        </div>
+
+    <!------------------------------------ FINAL MODAL DEL CARRO -------------------------------------->   
+
+    </main>
+    
+
+<!-- Footer -->  
+   <!-- Footer con logos de acceso a redes -->
+   <footer class="containerFooter">
+
+    <div class="contenedorFooterData row justify-content-center animate__animated animate__zoomIn">
+  
+      <div class="col-12 footerText">
+        <p class="footerTextP">&copy; 2025 Mariano Corino. Todos los derechos reservados.</p>
+      </div>
+      <div class="col-12 col-md-1 col-lg-1 imgFooter text-center">
+        <a href="https://www.facebook.com/profile.php?id=100063778803833&locale=es_LA" class="socialLink" target="_blank">
+            <img loading="lazy" src="../images/facebook.webp" class="img-fluid logoSocialFooter" alt="facebook">
+        </a>
+      </div>
+      <div class="col-12 col-md-1 col-lg-1 imgFooter text-center">
+        <a href="https://www.instagram.com/coghlanrunning/" class="socialLink" target="_blank">
+            <img loading="lazy" src="../images/instagram.webp" class="img-fluid logoSocialFooter" alt="instagram">
+        </a>
+      </div>
+      <div class="col-12 col-md-1 col-lg-1 imgFooter text-center">
+        <a href="../page/prox.html" class="socialLink">
+            <img loading="lazy" src="../images/whatsapp.webp" class="img-fluid logoSocialFooter" alt="whatsapp">
+        </a>
+      </div>
+  
+    </div>
+  
+  </footer>
+
+  <!-- Script Toastify JS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+  <!-- Script de Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  <!-- Script de SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Script de Tienda (después de Bootstrap y dependencias) -->
+  <script src="../js/script.js"></script>
+
+  
+  </body>
+  
+  </html>

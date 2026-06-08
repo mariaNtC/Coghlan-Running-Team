@@ -1,0 +1,178 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+/* ------------------------------- ESTILOS DE LA HTML NOSOTROS ------------------------------- */  
+main {    
+    .profContainer {
+        /* Propiedades del contenedor de las imagenes de la sección */         
+        margin: 20px 0px;
+        background-color:$colorContenedoresSecciones;
+        box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1); /* Sombra en la parte inferior */  
+        div {       
+            /* Espaciado y centrado de los contenedores */     
+            @include myp(0, 10px);/* Mixin- Margin y Padding */
+            justify-content: center; /* Para centrar los elementos horizontalmente */    
+            
+            .faceImg {
+                    /* Propiedades del contenedor de la img */
+                    position: relative; /* Para que el texto pueda ubicarse encima de la img */
+                    margin: 60px 30px;
+                    min-height: 300px;                    
+                    min-width: 300px;  
+                    
+                    .img-fluid{                             
+                        /* Para que el hover de la img se adapte a la forma redonda */
+                        border-radius: 50%;
+                    }      
+                   
+                    .textImgEvento {                           
+                        transition: opacity 0.3s;
+                        /* Propiedades del contenedor del texto */
+                        text-shadow: 2px 2px 5px rgba(1, 1, 1, 0.5);                     
+                        font-family: "Barlow Condensed", sans-serif;
+                        visibility: visible;
+                        font-size: 130%;                        
+                        position: absolute;
+                        top: 45%; // Ubica el texto en la mitad superior del contenedor padre
+                        left: 30%; // Coloca el texto en la mitad izquierda del contenedor padre
+                        transform: translate(-50%, -50%); // Centra el texto tanto horizontal como verticalmente
+                        text-align: center; // Centra el texto horizontalmente
+                        z-index: 1; // Asegura que el texto esté por encima de la imagen
+                        .nameImg {    
+                            line-height: 0.75; /* Ajusto el espaciado entre párrafos */                
+                            font-weight: bolder;
+                            margin: 15px 0 3px 0;
+                            color: $colorContenedoresSecciones;                            
+                        }
+                        .descNameImg {
+                            letter-spacing: 1px; /* Ajusto el espaciado entre letras */ 
+                            line-height: 1; /* Ajusto el espaciado entre párrafos */                       
+                            font-style: italic;
+                            font-size: 80%;
+                            color: $colorContenedoresSecciones;
+                            text-shadow: 2px 2px 5px rgba(1, 1, 1, 1);
+                        }
+                        span {                        
+                            display: block; /* Para generar saltos de línea en los textos */
+                        }    
+                                            
+                    } 
+            }         
+            
+                .img-fluid:hover + .textImgEvento{ 
+                    /* Cambia la opacidad de la img al hacer hover y aparece el texto encima*/                                                 
+                    opacity: 100%;
+                    transition: opacity 0.3s;
+                    /*Para que se muestre el texto al hacer hover en la img */
+                    visibility: visible;                    
+                }   
+                .textImgEvento:hover{   
+                    opacity: 100%;                
+                    /* Para que se mantenga visible al pasar por encima del texto de la img */
+                    visibility: visible;
+                    
+                }
+            
+        }
+    }
+
+    .h2Asociados { 
+        @include myp(0, 10px);/* Mixin- Margin y Padding */
+        color: $colorFontHover;
+        p {
+            @include myp(0,0);/* Mixin- Margin y Padding */
+        }
+    }
+    
+    .containerMarca {
+        display: flex;
+        justify-content: center;
+        /* Propiedades del contenedor de marcas asociadas */
+        background-image: url('../images/marcaBg.webp');
+        background-size: cover; /* Para cubrir todo el fondo */
+        background-position: center 80%; /* Para centrar la imagen */
+        background-repeat: no-repeat;  
+        @include myp(0, 0);/* Mixin- Margin y Padding */
+
+        .marcaImg {        
+            display: none;
+        }
+
+        .divAsociados {
+            /* Medidas del contenedor del carousel */           
+            @include hyw(200px,80%);
+            justify-content: center;
+           
+            #carouselAsociados {
+                 /* Medidas y centrado del contenedor del carousel */
+                display: flex;
+                height: 200px;
+                text-align: center;
+                justify-content: center;
+            }
+            .carouselInnerAsociados {
+                width: 80%; /* Para que los botones de cambio de img no queden muy pegados al borde de la pantalla */
+            }
+            .carousel-item {
+                width: 100%; /* Asegura que cada elemento del carousel tenga un ancho del 100% del contenedor */
+            }
+            .carouselImgAsociados {                
+                justify-content: center; /* Centra horizontalmente */
+                align-items: center; /* Centra verticalmente */
+                max-width: 100%; /* Mantiene el tamaño máximo */
+                max-height: 100%; /* Mantiene el tamaño máximo */
+               
+                .imgCarouselAsociados {
+                    object-fit: contain; /* Para que se adapte al tamaño del contenedor */ 
+                    max-width: 100%; /* Mantiene el tamaño máximo */
+                    max-height: 100%; /* Mantiene el tamaño máximo */
+                    height: 140px;
+                }
+            } 
+                   
+        }
+    }
+    
+}
+
+@media screen and (min-width: 770px){
+    main{
+        .containerMarca {
+            /* Propiedades del contenedor de marcas asociadas */
+            background-image: url('../images/marcaBg.webp');
+            background-size: cover; /* Para cubrir todo el fondo */
+            background-position: center 80%; /* Para centrar la imagen */
+            background-repeat: no-repeat;  
+            @include myp(0, 0);/* Mixin- Margin y Padding */
+            div {        
+                /* Altura del contenedor */                         
+                height: 200px;                                  
+                .marcaImg {
+                    /* Hace visibles los logos horizontales */ 
+                    visibility: visible;
+                    position: relative;  
+                    /* Centrado de los logos */ 
+                    display: flex;                
+                    justify-content: center; 
+                    align-items: center;                     
+                }
+                .logoImg { 
+                    min-width: 30%;                
+                    /* Ajuste de tamaño de los logos */                
+                    width: 80%; 
+                    opacity: 70%;  
+                }
+                .logoImg:hover { 
+                    /* Ajuste de tamaño de los logos */   
+                    opacity: 100%;  
+                    transition: opacity 0.3s;             
+                }
+            }                   
+        } 
+
+        .divAsociados     {
+            /* Para que se oculte el carousel de marcas */ 
+            display: none;
+        }
+    }   
+}

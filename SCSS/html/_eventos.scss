@@ -1,0 +1,66 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/extends";
+
+/* ------------------------------- ESTILOS DE LA HTML EVENTOS ------------------------------- */  
+main {
+    /* -------------------------- SECCIÓN EVENTOS -----------------------*/
+    .h1Eventos {
+        margin-bottom: 0px;/* Corrección de valor del h1 */
+    }
+    
+    .containerEventos {             
+        background-image: url('../images/eventosBg.webp');  /* IMG de fondo */
+        background-size: cover; /* Para cubrir todo el fondo */
+        background-position: center; /* Para centrar la imagen */
+        background-repeat: no-repeat;   
+        padding: 10px;
+        max-height: 900px; /* Altura máxima del contenedor */
+        overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es mayor que la altura */
+        .textEvent {
+            /* Propiedades de los contenedores de eventos */
+            background-color: $colorContenedoresSecciones;            
+            box-shadow: $shadowButton;
+            text-align: center;
+            font-family: "Barlow Condensed", sans-serif;
+            font-weight: 500;
+            @include myp(20px 30px,20px 0 0 0); /* Mixin- Margin y Padding */        
+            @include borderCreator(50%,50%,30px,30px); /* Mixin- Asigna curvas a las aristas */        
+            
+            .spanEvent{
+                /* Estilo de texto de la fecha del evento */
+                font-weight: bold;
+                display: block;                
+            }
+
+            .buttonEnterateMas {
+                border: none; /* Borro el border default de button del bootstrap */
+                background-color: $colorPrincipal; /* Asigno color al button */
+                @include borderCreator(0,0,23px,23px); /* Mixin- Asigna curvas a las aristas */ 
+                @include hyw(50px,100%);
+            }
+                .buttonEnterateMas:hover {
+                    /* Hover del botón para más información */
+                    background-color: $colorPrincipalStrong;
+                } 
+                .buttonEnterateMas:active {
+                    /* Active del botón para más información */
+                    background-color: transparent;
+                    border: 1px solid#F58700;
+                    color: #F58700;
+                    box-shadow: $shadowButton; 
+                    transition: opacity 0s;
+                } 
+        }            
+    }
+}
+
+@media screen and (min-width: 600px) {              
+    
+        .textEvent:hover {
+            /* Contenedor de eventos al hacerle hover */
+            opacity: 100%;
+            transition: opacity 0.1s;
+            box-shadow: $shadowMed;
+        }
+    }

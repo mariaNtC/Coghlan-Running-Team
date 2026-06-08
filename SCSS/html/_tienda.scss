@@ -1,0 +1,1318 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/extends";
+
+
+.aside {
+    position: fixed; // Fija el aside a la pantalla    
+    top: 100px;
+    width: 12%;
+    height: 100%; // Para que ocupe toda la pantalla
+    background: linear-gradient(to left, $colorPrincipal, $colorPrincipalStrong);
+    padding: 3% 0; 
+    overflow-y: auto;
+    z-index: 100;
+    
+    .asideBox {        
+        display: flex;
+        flex-direction: column; // Iconos dispuestos en columna
+        align-items: center; // Centrado horizontal de los iconos                
+
+        .asideBoxIcon {            
+            margin-bottom: 10px; // Espacio entre cada icono
+            padding: 25% 0;            
+
+            .iconAsideBox {
+                display: flex;
+                flex-direction: column; // Iconos dispuestos en columna
+                align-items: center; // Centrado horizontal de los iconos                
+                text-align: center;
+                text-decoration: none;
+                font-family: "Barlow Condensed", sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                color: $colorH;
+
+                .iconImgAsideBox {
+                    width: 50%; // Ancho de los iconos
+                    height: 50%; // Altura de los iconos
+                }
+                .iconImgAsideBox:hover{
+                    opacity: 0.6; // Cambia la opacidad al hacer hover sobre LOGOS de redes
+                    transition: opacity 0.3s ease; 
+                }
+            }
+        }
+    }   
+}
+
+
+
+.mainTienda {
+    padding: 0 2% 0 14%;
+    margin-top: 25%;
+
+
+    .carritoDatosComprados{
+        background-color: $colorPrincipalStrong;
+        @include borderCreator(8px, 8px, 8px, 8px);
+        margin-bottom: 20px;
+       
+
+        .carritoProductosComprados, .carritoCantidadComprados, .carritoMembresiaComprados{
+         /* Propiedades del título del h2 del contenedor de imágenes*/
+         box-shadow: $shadowSoft;
+         font-size: medium;  
+         height: auto;
+         width: 180px;     
+         @include borderCreator(0,8px,8px,0);     
+         margin: 0;    
+
+            p {
+                margin: 0;
+            }     
+
+        }
+
+        .carritoTotalComprados {
+         box-shadow: $shadowSoft;
+         font-size: medium;  
+         height: auto;
+         width: auto;       
+         background-color:rgb(96, 230, 91);
+         @include borderCreator(8px,8px,8px,8px);     
+         margin: 0;  
+         p {
+            font-size: xx-large;
+            margin: 0;
+         }
+        }
+    
+        .contenedorPrueba{                  
+            align-items: center;            
+            display: flex;             
+            font-size: small;  
+            flex-wrap: wrap-reverse;  
+            
+       
+       
+
+        .descCarritoProductosComprados,
+        .descCarritoCantidadComprados,
+        .descCarritoMembresiaComprados{
+            background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal, $colorPrincipalStrong);
+            margin: 3px;
+            font-weight: 400;
+            
+        }
+
+        .carritoProductosComprados,
+        .carritoCantidadComprados,
+        .carritoMembresiaComprados{
+            background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal);
+            margin: 3px;@include borderCreator(0,8px,8px,0);
+            padding: 3px;
+            p {
+                margin: 1px;
+                font-size: medium;
+                
+                
+            }
+        }
+
+        
+    
+       .carritoTotalContainer{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente los elementos */
+        text-align: center; /* Alinea el texto al centro */
+        width: 60%;
+        background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal, $colorPrincipalStrong);
+        
+                   
+        .descCarritoTotalComprados{
+            
+            font-size: x-large;
+            color: $colorH;
+            margin: 0;
+            padding: 8px;            
+        }
+
+        .carritoTotalComprados{
+            padding: 8px;
+            font-size: x-large;
+            color: rgba(2, 1, 1, 0.411);         
+            
+        }
+
+
+        .botonesAbonarVaciarContainer{
+            
+            display: flex;
+            font-size: small; //Letra pequeña descriptiva para cada uno de los botones     
+            margin: 4px;
+            
+            
+            .abonarCarritoContainer, .abrirCarritoBtn, .pagarBoton{
+                color: $colorH;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(96, 230, 91);
+                @include borderCreator (8px,0,0,8px);                
+                width: 100%;  
+                height: 50px;           
+                padding: 10;
+                                               
+                .iconBotonAbonar{
+                    width: 50%;
+                    height: auto;
+                    margin: 0;
+                    padding: 0;
+                }
+                .textAbonar{                                       
+                    margin: 0;
+                    padding: 0;
+                }
+
+            }
+            .abrirCarritoBtn:hover {                
+                    background-color:rgb(138, 247, 134);   
+                    transition: background-color 0.5s ease; //                             
+                    color:rgba(2, 1, 1, 0.384);
+                    transition: color 0.2s ease; 
+                    box-shadow: $shadowButton;
+                    cursor: pointer;
+                
+            }
+
+            .vaciarCarritoContainer, .vaciarCarritoBtn{
+                color: $colorH;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color:rgb(230, 91, 91);
+                @include borderCreator (0,8px,8px,0);                
+                width: 100%;
+                height: 50px;
+                    .iconBotonVaciar{
+                        width: 50%;
+                        height: auto;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .textQuitar{
+                        
+                        margin: 0;
+                        padding: 0;
+                    }
+            }
+
+
+            
+
+                .pagarCarritoBtn:hover{
+                    background-color:rgb(138, 247, 134);   
+                    transition: background-color 0.5s ease; //                             
+                    color:rgba(2, 1, 1, 0.384);
+                    transition: color 0.2s ease; 
+                    box-shadow: $shadowButton;
+                    cursor: pointer;
+                }
+                .vaciarCarritoBtn:hover{
+                    background-color:rgb(252, 162, 162);
+                    transition: background-color 0.5s ease; // 
+                    color:rgba(2, 1, 1, 0.384);
+                    transition: color 0.2s ease; 
+                    box-shadow: $shadowButton;
+                    cursor: pointer;
+                }            
+
+        }
+        
+       }    
+       
+       .userTiendaContainer{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+           
+
+            .imgAvatarTienda {
+                // Medida del icono del avatar del usuario de la tienda
+                height: 40px;
+                margin: 3px;
+            }
+
+            .loginBoton, .registrarBoton {
+                color: $colorH;
+                display: flex;
+                flex-wrap: wrap;
+                padding: 8px;
+            }
+            
+       }
+       
+    }
+    
+}
+
+    
+    .seccionTopCarritoContainer{
+            display: flex;
+            justify-content: center; 
+            text-align: right;
+            
+              
+        
+        .seccionTopCarrito{
+            color: $colorPrincipalStrong;
+            .productosComprados{
+                border: 1px solid $colorPrincipalStrong;
+                border-bottom: 0px;          
+                
+            }
+            .cantidadComprados{
+                border: 1px solid $colorPrincipalStrong;
+                border-bottom: 0px;
+                
+               
+            }
+            .contenedorTotalCompra{
+                border: 1px solid $colorPrincipalStrong;
+                font-weight:600;
+                background-color: $colorPrincipalStrong;
+                color:$colorContenedoresSecciones;
+                
+            }
+            .iconCarroSeccionTopCarrito{
+                display: flex;
+                width: 20%;
+                
+            }
+        }
+
+        
+    }
+
+
+    .h2Membresias, .h2Indumentaria, .h2Articulos, .h2Modal {
+        margin: 20px 0 0 0;
+        /*Propiedades del contenedor del h2 de las galerías*/
+        background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal, $colorPrincipalStrong);              
+        box-shadow: $shadowSoft;
+        @include borderCreator(8px,8px,8px,8px);
+        width: 100%;
+        scroll-margin-top: 140px; /* Ajusta este valor según la altura de tu header */   
+        
+        img {
+            // Medidas de los iconos de las secciones de la tienda
+            height: 40px;
+            margin: 3px;
+        }
+        .tiendaIconH2 {
+          /* Propiedades del título del h2 del contenedor de imágenes*/
+          box-shadow: $shadowSoft;
+          font-size: medium;
+          background-color:$colorPrincipal;
+          @include borderCreator(0,0,8px,8px);     
+          margin: 0;     
+          
+        }                
+    }
+
+
+    .h1Tienda{
+        margin: 0;
+        padding: 0;        
+    
+    }
+
+    //---------------------------------------------MEMBRESÍAS----------------------------------------------------------------------
+    #productosMembresias {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 ; /* Centra el contenedor */
+    .idTiendaContainer {   
+        width: auto;
+        height: auto;
+        background-color: $colorContenedoresSecciones;
+        padding: 10px;     
+        display: flex;   
+        flex-wrap: wrap;
+        
+           
+          
+
+        .idItemContainer {      
+            max-width: 200px;           
+            margin: 0;
+            @include borderCreator (0,0,10px,15px);
+            background-color: $colorContenedoresSecciones;
+            box-shadow: $shadowSoft;
+            
+        }
+        
+        .idTextContainer {
+            .idItemImgName {
+                color: $colorPrincipalStrong;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+                font-weight:500;
+                font-size: small;
+                margin: 0;
+                p{
+                    margin: 0;
+                    padding: 8px;
+                }
+            }
+            .idItemImgPrecio{
+                color: $colorContenedoresSecciones;
+                background-color: rgb(96, 230, 91);
+                font-weight: bold;
+                font-size: large;
+                margin-bottom: 8px;
+                p {
+                    color:rgba(2, 1, 1, 0.3);
+                    margin: 0;
+                }
+                
+            }
+            
+            .idItemImgTextDesc {
+                color: $colorPrincipalStrong;     
+                margin: 0;
+                padding: 8px 0;
+                font-size: 10px;                    
+            }
+
+            .mesesContenedorTienda {
+                display: flex;
+                justify-content: center;
+                
+
+                .inputMeses {
+                    display: none;
+                }
+                
+
+                
+                
+                    // Estilo para los labels como círculos
+                    .labelInputMeses {                        
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        border-radius: 50%; // Forma el label como un círculo 
+                        border: 2px solid $colorPrincipalStrong; // Borde del círculo
+                        color: rgba(0, 0, 0, 0);
+                        font-weight: bold;
+                        margin: 0 16px;  
+                                             
+                                               
+                        cursor: pointer;
+                    }
+                
+                // Estilo cuando el radio está seleccionado 
+                .inputMeses:checked + .labelInputMeses {
+                    background-color: $colorPrincipalStrong; // Color de fondo cuando está seleccionado 
+                    color: #fff; /// Color del texto cuando está seleccionado 
+                    box-shadow: $shadowMed;
+                }
+            }
+        }
+        
+        .contenedorBotonesTienda{
+            display: flex;
+            align-items: center;
+            .botonComprar{
+                border: none;
+                background-color:rgb(96, 230, 91);
+                width: 80%;
+                height: 40px;                
+                margin:0;
+                align-items: center;
+                display: flex;
+                cursor: pointer; 
+                @include borderCreator (0,0,0,10px);
+                color: $colorContenedoresSecciones;
+                    font-weight: bolder;
+                // rgb(138, 247, 134) ;
+
+                .textBotonComprar, .textBotonBorrar{
+                    width: 100%;
+                    margin: 0;
+                    color: $colorH;
+                    font-weight: bolder;           
+                }
+                
+            }
+
+            
+            .botonBorrarItem{ //Estilos del contenedor del botón de quitar membresía
+                border: none;
+                display: flex;
+                right: 0; /* Ajusta el botón al extremo derecho */
+                background-color:rgb(230, 91, 91);
+                height: 40px;                
+                width: 20%;
+                 
+                justify-content: center;
+                @include borderCreator (0,0,10px,0);
+
+                .botonQuitarId { //Estilos del botón para quitar membresía
+                    cursor: pointer;
+                    border: none;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(128, 128, 128, 0);
+                }
+                .tachoTienda{ //Estilo de la img del tacho del botón
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+        .botonComprar:hover{
+            background-color:rgb(138, 247, 134);   
+            transition: background-color 0.3s ease; //                             
+            color:rgba(2, 1, 1, 0.3);
+            transition: color 0.3s ease; 
+        }
+        .botonBorrarItem:hover{
+            background-color:rgb(252, 162, 162);
+            transition: background-color 0.3s ease; // 
+        }            
+    }
+    .idItemContainer:hover {
+        box-shadow: $shadowMed;
+    }
+}
+
+    //---------------------------------------------FIN DE MEMBRESÍAS----------------------------------------------------------------------
+    
+    
+    #productosIndumentaria {
+        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 ; /* Centra el contenedor */
+       
+        
+    .indumentariaTiendaContainer {    
+        display: flex;
+        justify-content: center; // Centra horizontalmente los elementos
+        flex-wrap: wrap; // Permite que los elementos se envuelvan si no caben en una línea
+
+       
+        .indumentariaItemContainer {
+            
+            max-width: 200px;
+            margin: 10px;
+            @include borderCreator (0,0,10px,15px);
+            background-color: $colorContenedoresSecciones;
+            box-shadow: $shadowSoft;
+            
+            
+            
+            .indumentariaTextContainer {
+                .indumentariaItemImgName {
+                    color: $colorPrincipalStrong;
+                    border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+                    font-weight:500;
+                    font-size: small;
+                    p{
+                        margin: 0;
+                        padding: 8px;;
+                    }
+                }
+                .indumentariaItemImgPrecio{
+                    color: $colorContenedoresSecciones;
+                    background-color: rgb(96, 230, 91);
+                    font-weight: bold;
+                    font-size: large;
+                    margin-bottom: 8px;
+                    p {
+                        color:rgba(2, 1, 1, 0.3);
+                        margin: 0;
+                    }
+                    
+                }
+                
+                .indumentariaItemImgTextDesc {
+                    color: $colorPrincipalStrong;                                      
+                    padding-top: 8px;
+                    margin: 0;
+                    font-size: 10px;                    
+                }
+            }
+
+            .tallesContenedorTienda {
+                display: flex;
+                justify-content: center;
+                padding: 8px;
+                
+
+                .inputTalles {
+                    display: none;
+                }
+                
+                    // Estilo para los labels como círculos
+                    .labelInputTalles {                        
+                        width: 30px;
+                        height: 30px;
+                        text-align: center;
+                        border-radius: 50%; // Forma el label como un círculo 
+                        border: 2px solid $colorPrincipalStrong; // Borde del círculo
+                        color: $colorPrincipalStrong;
+                        font-weight: bold;
+                        margin-right: 8px; // Espacio entre los círculos 
+                        cursor: pointer;
+                    }
+                
+                // Estilo cuando el radio está seleccionado 
+                .inputTalles:checked + .labelInputTalles {
+                    background-color: $colorPrincipalStrong; // Color de fondo cuando está seleccionado 
+                    color: #fff; /// Color del texto cuando está seleccionado 
+                    box-shadow: $shadowMed;
+                }
+            }
+
+            
+            
+            .indumentariaImg {
+                align-items: center;
+                display: flex;
+            }
+
+            .contenedorBotonesTienda{
+                display: flex;
+                align-items: center;
+                .botonComprar{
+                    background-color:rgb(96, 230, 91);
+                    width: 80%;
+                    height: 40px;                
+                    margin:0;
+                    align-items: center;
+                    display: flex;
+                    cursor: pointer; 
+                    @include borderCreator (0,0,0,10px);
+                    border: none;
+                    color: $colorContenedoresSecciones;
+                        font-weight: bolder;
+                    // rgb(138, 247, 134) ;
+
+                    .textBotonComprar, .textBotonBorrar{
+                        margin: 0;
+                        color: $colorH;
+                        font-weight: bolder;           
+                    }
+                    
+                }
+                .botonQuitarId{
+                    display: flex;
+                    right: 0; /* Ajusta el botón al extremo derecho */
+                    background-color:rgb(230, 91, 91);
+                    height: 40px;
+                    padding: 5px 0;
+                    width: 20%;
+                    cursor: pointer; 
+                    justify-content: center;
+                    border: none;                    
+                    @include borderCreator (0,0,10px,0);
+                    
+
+                    .tachoTienda{
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+            }
+            .botonComprar:hover{
+                background-color:rgb(138, 247, 134);   
+                transition: background-color 0.3s ease; //                             
+                color:rgba(2, 1, 1, 0.3);
+                transition: color 0.3s ease; 
+            }
+            .botonQuitarId:hover{
+                background-color:rgb(252, 162, 162);
+                transition: background-color 0.3s ease; // 
+            }            
+        }
+
+        .indumentariaItemContainer:hover {
+            box-shadow: $shadowMed;
+        }
+    }
+    }
+
+}
+
+
+//-------------------------------------------------------------ARTÍCULOS-------------------------------------------------------------------------------
+#productosArticulos {
+
+    display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 ; /* Centra el contenedor */
+.articuloTiendaContainer {        
+    display: flex;
+        justify-content: center; // Centra horizontalmente los elementos
+        flex-wrap: wrap; // Permite que los elementos se envuelvan si no caben en una línea
+
+   
+    .articuloItemContainer {
+        
+        max-width: 200px;
+        justify-content: center;
+        height: auto;
+        margin: 10px;
+        @include borderCreator (0,0,10px,15px);
+        background-color: $colorContenedoresSecciones;
+        box-shadow: $shadowSoft;
+        
+        
+        .articuloTextContainer {
+            .articuloItemImgName {
+                color: $colorPrincipalStrong;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+                font-weight:500;
+                font-size: small;
+                p{
+                    margin: 0;
+                    padding: 8px;
+                }
+            }
+            .articuloItemImgPrecio{
+                color: $colorContenedoresSecciones;
+                background-color: rgb(96, 230, 91);
+                font-weight: bold;
+                font-size: large;
+                margin-bottom: 8px;
+                p {
+                    color:rgba(2, 1, 1, 0.3);
+                    margin: 0;
+                }
+                
+            }
+            
+            .articuloItemImgTextDesc {
+                color: $colorPrincipalStrong;                                      
+                padding: 8px;
+                margin: 0;
+                font-size: 10px;                    
+            }
+        }
+
+.articuloImg {
+            align-items: center;
+            display: flex;
+        }
+
+        .contenedorBotonesTienda{
+            display: flex;
+            align-items: center;
+            border: none;
+            .botonComprar{
+                border: none;
+                background-color:rgb(96, 230, 91);
+                width: 80%;
+                height: 40px;                
+                margin:0;
+                align-items: center;
+                display: flex;
+                cursor: pointer; 
+                @include borderCreator (0,0,0,10px);
+                color: $colorContenedoresSecciones;
+                    font-weight: bolder;
+                // rgb(138, 247, 134) ;
+
+                .textBotonComprar, .textBotonBorrar{
+                    margin: 0;
+                    color: $colorH;
+                    font-weight: bolder;           
+                }
+                
+            }
+            .botonQuitarId{
+                border: none;
+                display: flex;
+                right: 0; /* Ajusta el botón al extremo derecho */
+                background-color:rgb(230, 91, 91);
+                height: 40px;
+                padding: 5px 0;
+                width: 20%;
+                cursor: pointer; 
+                justify-content: center;
+                @include borderCreator (0,0,10px,0);
+
+                .tachoTienda{
+                    width: auto;
+                    height: 100%;
+                }
+            }
+        }
+        .botonComprar:hover{
+            background-color:rgb(138, 247, 134);   
+            transition: background-color 0.3s ease; //                             
+            color:rgba(2, 1, 1, 0.3);
+            transition: color 0.3s ease; 
+        }
+        .botonQuitarId:hover{
+            background-color:rgb(252, 162, 162);
+            transition: background-color 0.3s ease; // 
+        }            
+    }
+
+    .articuloItemContainer:hover {
+        box-shadow: $shadowMed;
+    }
+}
+}
+
+
+
+// --------------------------------------- Estilos para el Popover -------------------
+.popoverEliminarProducto, .popoverVaciarCarrito {    
+    display: none; // Por defecto oculto 
+    position: fixed; // Fijar posición en la ventana 
+    top: 58%; // Centrar verticalmente
+    left: 50%; // Centrar horizontalmente 
+    transform: translate(-50%, -50%); // Ajustar posición relativa al tamaño del popover 
+    z-index: 9999;
+    background: linear-gradient(to right, #e65b5b, #ec8b8b, rgb(230, 91, 91));
+    border: 2px solid rgb(238, 45, 45);
+    color: $colorH;
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: $shadowButton;
+}
+
+.popover-inner, .popover-inner {
+    max-width: 100%; /* Ancho máximo del popover */
+}
+
+ .popoverPagarCarrito {
+    display: none; // Por defecto oculto 
+    position: fixed; // Fijar posición en la ventana 
+    top: 50%; // Centrar verticalmente
+    left: 50%; // Centrar horizontalmente 
+    transform: translate(-50%, -50%); // Ajustar posición relativa al tamaño del popover 
+    z-index: 9999;
+    background: linear-gradient(to right, #60e65b, #8af786, rgb(96, 230, 91));
+    border: 2px solid rgb(56, 175, 52);
+    color: rgba(2, 1, 1, 0.3);
+    font-weight: bolder;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: $shadowButton;
+   
+
+}
+
+
+
+
+//------------------------- POP OVER MODAL BOTON VACIAR CARRO------------------------
+
+// Estilos para el popover de confirmación de vaciar carrito
+.popoverVaciarCarrito {
+   
+
+    .popover-inner {
+        .popover-body {
+            font-size: 14px;    
+        }
+
+        .botonConfirmarVaciado {            
+            border: none;
+            background-color: rgb(238, 45, 45);
+            margin: 4px;
+        }
+        .botonCancelarVaciado {
+            margin: 4px;
+            border: none;
+        }
+        .btn:active {
+            background-color: rgb(236, 139, 139);
+            border: none;            
+        }
+        .btn:hover {
+            background-color: rgb(230, 91, 91);
+            border: none;            
+        }
+    }
+}
+
+ .popoverPagarCarrito {
+    .popover-body {
+        font-size: 14px;            
+    }
+
+    .botonConfirmarPago {
+        border: none;
+        background-color: rgb(96, 230, 91);
+        margin-right: 10px;
+    }
+    .botonCancelarPago {
+        border: none;
+    }
+    .btn:active {
+        background-color: rgb(138, 247, 134);
+        border: none;            
+    }
+    .btn:hover { 
+        background-color: #38af34;
+        border: none;
+     
+    }
+}
+ 
+
+
+
+//-----------------------Estilos del modal del carrito-----------------------
+.iconoCarrito {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: $colorPrincipal; /* Color de fondo del icono */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 20;
+}
+    .iconoCarrito:hover {
+        background-color: $colorPrincipalStrong;
+        transition: background-color 0.15s ease-in;
+    }
+
+
+  .estela-roja {
+
+    outline: 10px solid #e65b5bb2;
+    transition: outline 0.3s ease-out;
+
+  }
+  .estela-verde {
+  
+    outline: 10px solid #60e65baf;
+    transition: outline 0.3s ease-out;
+    
+  }
+
+.iconoCarrito img {
+    width: 40px; /* Ajusta el tamaño del icono dentro del círculo */
+}
+
+/* Estilo del modal */
+.modalCarrito {
+    border: none;
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: auto;    
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+
+    .modalContenido {
+        background-color: #fefefe;
+        margin: 12% auto; /* Centrado vertical y horizontal */
+        padding: 20px;    
+        width: 80%;
+        max-height: 500px;
+        position: relative;
+        border-radius: 8px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;        
+
+        .carritoModalImg {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            border-radius: 8px;
+            margin: 8px;
+        }
+
+        #costoFinalModal {
+            p {
+                padding: 0;
+                margin: 0;
+            }
+        
+        }
+        .carritoModalPrecioFinal{        
+            font-weight: bold;
+            font-size: smaller;
+            text-align: center;
+            color:rgba(2, 1, 1, 0.3);
+            margin: 0;
+            padding: 0;
+
+        }
+        .carritoModalPrecioTotal {       
+            background-color: rgb(96, 230, 91);
+            font-weight: bold;
+            font-size: large;        
+            text-align: center;
+            color:rgba(2, 1, 1, 0.3);
+            p {
+                color:rgba(2, 1, 1, 0.3);
+                margin: 0;           
+            }
+        }
+
+        .h2Modal {        
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /*Propiedades del contenedor del h2 de las galerías*/
+            background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal, $colorPrincipalStrong);              
+            box-shadow: $shadowSoft;
+            @include borderCreator(5px,5px,5px,5px);
+            width: 100%;
+            margin: 0;
+            margin-bottom: 12px;
+            scroll-margin-top: 140px; /* Ajusta este valor según la altura de tu header */   
+            
+            img {
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                // Medidas de los iconos de las secciones de la tienda            
+                height: 40px;
+                margin: 3px;
+            }
+            .tiendaIconH2 {
+            /* Propiedades del título del h2 del contenedor de imágenes*/
+            color: $colorContenedoresSecciones;
+            font-size: medium;
+            background-color: $colorPrincipal;
+            margin: 0;     
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            box-shadow: $shadowSoft;
+            
+            }               
+
+        }
+        .modalContenidoTextos {
+            max-height: 400px;
+            overflow-y: auto;
+            padding: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            
+        
+            .contenedorProductosCarrito{
+                box-shadow: $shadowSoft;
+                display: flex;
+                align-items: center;                                        
+                margin: 8px 10px;
+                padding: 3px;
+                font-size: small;  
+                border-radius: 8px;
+                
+                .contenedorImgCarrito{
+                    display: flex;
+                }
+
+                .contenedorDatosProductoCarrito {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 10px;
+                    align-items: center;
+                    text-align: center;
+                    
+
+                    .contenedorCantidadProdcutosCarrito{
+                        align-items: center;
+                        display: flex;
+                        flex-direction: row;
+                    }
+                
+                
+                .botonQuitarDelCarrito, .botonAumentarCantidad{
+                    width: 25px;
+                    height: 25px;
+                    text-align: center;
+                    border-radius: 50%; // Forma el label como un círculo 
+                    border: none;
+                    color: $colorContenedoresSecciones;
+                    font-weight: bolder;
+                    font-size: l;
+                    padding: 0; 
+                    margin: 0;                
+                    background-color: $colorPrincipalStrong;
+                    cursor: pointer;
+                    p {
+                        color: rgb(0, 0, 0);
+                    }
+                }
+
+                .h3ProductosCarrito{
+                    font-size: small;  
+                    margin: 0;
+                    padding: 0;
+                
+                }
+                .textoH3PruductosCarrito{         
+                    padding: 0px 6px;
+                    border-radius: 4px;
+                    margin: 3px 6px;
+                }
+                .textoH3PruductosCarritoPrecio{
+                     
+                    margin: 0;
+                    padding: 0px 6px;
+                    margin: 3px 10px;
+                    border-radius: 4px;
+                }
+                .textoH3PruductosCarritoTotal{
+                               
+                    margin: 0;
+                    padding: 0px 6px;
+                    margin: 3px 10px;
+                    border-radius: 4px;
+                }
+            }
+
+            }
+            .contenedorProductosCarrito:hover {
+                box-shadow: $shadowMed;
+            }
+    }
+}
+
+.cerrarModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    
+}
+
+.cerrarModal:hover,
+.botonCerrarModal:hover {
+    color: #000;
+}
+
+.contenedorBotonesModal {
+    display: flex;
+.pagarBoton {
+    border: none;
+    background-color:rgb(96, 230, 91);
+    width: 70%;
+    height: 50px;                
+    margin:0;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer; 
+    
+    color: $colorContenedoresSecciones;
+        font-weight: bolder;
+}
+.vaciarCarritoBtn {
+    border: none;
+    display: flex;
+    right: 0; /* Ajusta el botón al extremo derecho */
+    background-color:rgb(230, 91, 91);
+    height: 50px;                
+    width: 32%;
+    margin: 0;
+    padding: 0;
+    color: $colorContenedoresSecciones;
+    font-weight: bolder;
+    text-align: center;
+    align-items: center;     
+    justify-content: center;
+        .vaciarCarritoImgBtn{
+            height: 90%;
+        }   
+}
+        .vaciarCarritoBtn:hover{
+            background-color:rgb(252, 162, 162);
+            transition: background-color 0.3s ease; // 
+            color:rgba(2, 1, 1, 0.3);
+        }         
+        .pagarBoton:hover{
+            background-color:rgb(138, 247, 134);   
+            transition: background-color 0.3s ease; //                             
+            color:rgba(2, 1, 1, 0.3);
+            transition: color 0.3s ease; 
+        }   
+}
+
+.botonCerrarModal {
+    
+    background: linear-gradient(to right, $colorPrincipalStrong, $colorPrincipal, $colorPrincipalStrong);        
+    color: #fff;
+    border: none;
+    height: 40px;   
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    @include borderCreator (0,0,5px,5px);
+    font-size: 16px;    
+    cursor: pointer;    
+    font-weight: bolder;
+}
+}
+
+
+
+//----------------------------------------------------------FIN DE ARTÍCULOS-------------------------------------------------------------------------------
+@media screen and (max-width: 6000px) {
+    .mainTienda {
+        margin-top: 7%; //Espaciado para que los fixed no pisen el contenido del main
+}
+}
+@media screen and (max-width: 1900px) {
+    .mainTienda {
+        margin-top: 9%; //Espaciado para que los fixed no pisen el contenido del main
+}
+}
+@media screen and (max-width: 1500px) {
+    .mainTienda {
+        margin-top: 10%; //Espaciado para que los fixed no pisen el contenido del main
+}
+
+}
+@media screen and (max-width: 1300px) {
+    .mainTienda {
+        margin-top: 13%; //Espaciado para que los fixed no pisen el contenido del main
+}
+.userTiendaContainer{
+    justify-content: center;    
+    width: 100%;
+    
+}
+
+}
+@media screen and (max-width: 900px) {
+    .mainTienda {
+        margin-top: 20%; //Espaciado para que los fixed no pisen el contenido del main
+}
+.userTiendaContainer{
+    justify-content: center;    
+    width: 100%;
+}
+
+}
+@media screen and (max-width: 600px) {
+    .mainTienda {
+        margin-top: 30%; //Espaciado para que los fixed no pisen el contenido del main
+}
+.contenedorPrueba{
+    justify-content: center; //Para que se centre en el medio del contenedor los datos del carrito cuando se achica la pantalla
+}
+.userTiendaContainer{
+    justify-content: center;    
+    width: 100%;
+}
+}
+@media screen  and (min-width: 900px){
+.modalCarrito {
+    top: 0%;
+}
+}
+@media screen and (min-width: 700px) {
+    .indumentariaItemContainer, .articuloItemContainer, .idItemContainer{        
+            width: 100%;
+        }  
+    }
+
+@media screen and (max-width: 400px) {
+    .aside {
+        width: 100%; // Para que ocupe toda la pantalla de manera horizontal
+        height: auto; // Para que se ajuste la altura al tamaño de las img        
+        padding: 12% 0 3% 0; // Ajuste de padding para que no se superponga con el header          
+        
+        .asideBox {                    
+            flex-direction: row;  //Iconos ordenados de manera horizontal            
+            
+            .asideBoxIcon {
+                padding: 0 10%;     
+
+                .iconAsideBox {            
+                    .iconImgAsideBox {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }        
+            }
+        }
+        
+    }   
+    .mainTienda {
+        margin-top: 65%; //Espaciado para que los fixed no pisen el contenido del main
+        padding: 0% 2% 0 2%; //Espaciado entre los márgenes de la pantalla
+    }
+    .indumentariaItemContainer, .idItemContainer, .articuloItemContainer {
+        width: 100%;
+    } 
+}
+
+@media screen and (max-width: 346px) {
+    .aside {
+    padding: 40% 0 3% 0; // Ajuste de padding para que no se superponga con el header
+    }
+    .indumentariaItemContainer, .idItemContainer, .articuloItemContainer {
+        width: 100%;
+    }
+    .mainTienda {
+        margin-top: 97%; //Espaciado para que los fixed no pisen el contenido del main
+        
+}
+    
+}
+
+@media screen and (max-width: 250px) {
+    .aside {
+        padding: 55% 0 3% 0; // Ajuste de padding para que no se superponga con el header
+        }
+    .mainTienda {
+        margin-top: 120%; //Espaciado para que los fixed no pisen el contenido del main
+        
+}
+}
+
+
+

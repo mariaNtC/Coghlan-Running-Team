@@ -1,0 +1,160 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/extends";
+
+/* ------------------------------- ESTILOS DE LA HTML CONTACTO ------------------------------- */  
+.contactBg{
+    background-image: url('../images/runBg.webp');/* Img de fondo de la sección */
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-position: center; /* Para centrar la imagen */
+    background-repeat: no-repeat; /* Para que no se repita la img */
+    
+    main {     
+        /* -------------------------- SECCIÓN CONTACTO -----------------------*/ 
+        .containerContacto {
+            .containerNosotros {                
+                .containerInternoMapa { 
+                    /* Para separar los contenedores entre si y de los bordes */
+                    margin: 15px 15px 60px 15px;
+                    
+                
+                        .mapDiv {
+                            /* Propiedades del fondo del contenedor del mapa */                            
+                            @include hyw(340px, 100%);/*Mixin de Height y Width*/
+                            background-color: $colorContenedorForm;
+                            box-shadow: $shadowSoft;
+                            
+                            /* Propiedades del tamaño del mapa */
+                            .map {                               
+                                @include hyw(100%, 100%); /*Mixin de Height y Width*/
+                                @include myp(0, 15px 10px); /* Mixin- Margin y Padding */                                
+                            }
+                        }
+                            .mapDiv:hover {
+                                background-color: $colorContenedoresSecciones;
+                                transition: background-color 0.4s;
+                            }
+                        .datosDiv {
+                             /* Propiedades del contenedor de datos de contacto */
+                            background-color: $colorContenedorForm;                            
+                            @include hyw(160px, 100%);/*Mixin de Height y Width*/                            
+                            @include myp(10px 0 0 0, 10px 0);/* Mixin- Margin y Padding */                            
+                            box-shadow: $shadowSoft;
+
+                            p {
+                                /* Propiedades del contenedor de texto de datos de contacto */                                
+                                @include myp(15px 0, 5px);/* Mixin- Margin y Padding */
+                                color: $colorH; 
+                                background-color:$colorPrincipalStrong;
+                                   
+                                img {
+                                    /* Propiedades del icono del texto de datos de contacto */
+                                   height: 25px;
+                                   margin: 5px;  
+                                }  
+                            }
+                        }
+                            .datosDiv:hover {
+                                background-color: $colorContenedoresSecciones;
+                                transition: background-color 0.4s;                                              
+                            }
+                        p:hover {
+                            background-color: $colorPrincipal;
+                            transition: background-color 0.3s;      
+                            img {
+                                animation: 1s;
+                            }                                                                   
+                        }
+                    }
+                    
+                .containerForm2 {
+                    /* Espaciado entre contenedores */
+                    margin: 15px;
+                
+                .formDiv {
+                    /* Propiedades del contenedor del form */
+                    height: 510px;
+                    box-shadow: $shadowSoft;
+                    background-color: $colorContenedorForm;
+                    @include myp(0, 15px);/* Mixin- Margin y Padding */                                       
+                    
+                    h2 {  
+                        /* Corrección de valores del h2 */
+                        color: $colorH; 
+                        background-color:$colorPrincipalStrong;
+                        margin-bottom: 20px;
+                        border-radius: 10px;
+                    }
+
+                    .formNosotros {                        
+                        /* Asigno estilos a los input */
+                        .containerInputNombre {
+                            /* Corrección de valores heredados del framework */
+                            padding-left: 0;
+                        }
+                        .containerInputEmail {
+                            /* Corrección de valores heredados del framework */
+                            padding-right: 0;
+                        }
+                            .inputNosotros {      
+                                /* Opacidad del contenedor del form */
+                                opacity: 60%;
+                                transition: opacity 0.3s;                              
+                            }
+                                .inputNosotros:hover {
+                                    /* Hover de los input */
+                                    opacity: 100%; 
+                                    box-shadow: $shadowMed;                             
+                                }
+                                .inputNosotros:focus {
+                                    /* Cuando está posicioinado sobre el input */
+                                    opacity: 100%;   
+                                    box-shadow: $shadowMed;  
+                                    border: 2px solid $colorSecundario;                                            
+                                }
+                                .inputNosotros:active {
+                                    /* Corrección de valores heredados del framework */
+                                    opacity: 100%;    
+                                    box-shadow: $shadowMed; 
+                                    border: 2px solid $colorPrincipal;                          
+                                }
+                                               
+                        .textareaNosotros {
+                            /* Para que el text area del form no sea ajustable */
+                            resize: none;
+                            height: 190px;
+                        }
+                    
+                        .buttonContainerNosotros{
+                            
+                            /* Propiedades de los botones */
+                            .buttonContactoS, .buttonContactoR {      
+                                display: inline;                          
+                                background-color: $colorPrincipal;
+                                border: $colorPrincipal;                                
+                                @include borderCreator(5px,15px,5px,15px);  /*Mixin de estilos de vértices radiales*/                                                            
+                            }
+                            .buttonContactoS:hover, .buttonContactoR:hover {
+                                opacity: 0.6;
+                                transition: opacity 0.5s ease;    
+                            }
+                            .buttonContactoS:active, .buttonContactoR:active {
+                               
+                                border: 2px solid $colorPrincipalStrong;                                                
+                                color: $colorPrincipalStrong;
+                                background-color: transparent;
+                                box-shadow: $shadowButton;
+                                font-weight:500;       
+                            }
+                        }    
+                    }                    
+                }   
+                    .formDiv:hover {
+                        background-color: $colorContenedoresSecciones;
+                        transition: background-color 0.3s;
+                    }             
+                }
+            }
+        }
+    }
+}

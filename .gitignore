@@ -1,0 +1,14 @@
+# Mapas de source (no necesarios en producción)
+*.map
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# SCSS fuente (opcional: subir solo el CSS compilado)
+# SCSS/
+
+# Editor
+.vscode/
+.idea/

@@ -1,0 +1,2372 @@
+@charset "UTF-8";
+/* IMPORTS */
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* ------------------------------- ESTILOS DEL HEADER ------------------------------- */
+header nav .container-fluid {
+  /* Ubicación y propiedades del NAV*/
+  margin-top: -8px; /* Corrección de desfase*/
+  background-color: #F58700;
+  border-bottom: 3px solid #ffab45; /* Borde en la parte inferior */
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+header nav .container-fluid .indexLogoLink {
+  width: 112px; /* Corrección de espaciado entre menú hambruguesa y logo*/
+  /*Mixin de Margin y Padding*/
+  margin: 0 0 0 30px;
+  padding: 5px;
+  /* Mixin- Margin y Padding */
+}
+header nav .container-fluid .indexLogoLink img {
+  /* Propiedades de la img del logo*/
+  width: 8%;
+  min-width: 100px;
+}
+header nav .container-fluid button {
+  /* Propiedades del menú Hamburguesa*/
+  margin: 10px 25px 10px 0px;
+  color: #ffe4c4;
+  border: 2px solid rgba(255, 228, 196, 0.5);
+}
+header nav .container-fluid button span {
+  /* Propiedades de la img dentro del menú Hamburguesa*/
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+header nav .container-fluid div ul {
+  /* Ubicación y propiedades de las UL del NAV*/
+  list-style-type: none;
+  font-family: "Barlow Condensed", sans-serif; /* Llamo a la fuente importada*/
+  display: flex;
+  text-align: center;
+  position: fixed;
+  right: 0;
+  background-color: #F58700;
+}
+@media screen and (max-width: 991px) {
+  header nav .container-fluid div {
+    /* Cuando se habilita el menú hambur. se modifican los estilos de los links del nav*/
+  }
+  header nav .container-fluid div ul {
+    width: 100%;
+    box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  header nav .container-fluid div .nav-link.active, header nav .container-fluid div .nav-link.show {
+    /* Propiedades del texto A del NAV que está ACTIVO*/
+    background-color: #e97100;
+    margin: 0px;
+  }
+}
+header nav .container-fluid div li .nav-link {
+  /* Propiedades del texto A del NAV*/
+  color: #ffe4c4;
+  text-decoration: none;
+  font-size: x-large;
+  margin: 5px 20px;
+}
+header nav .container-fluid div li .nav-link:hover {
+  /* Hover de links del NAV*/
+  color: #3d1b12;
+  transition: color 0.5s ease;
+}
+header nav .container-fluid div li .nav-link.active, header nav .container-fluid div li .nav-link.show {
+  /* Propiedades del texto A del NAV que está ACTIVO*/
+  text-decoration: overline;
+  color: #f8bc72;
+}
+header nav .container-fluid div li {
+  /* Propiedades del botón de TIENDA*/
+}
+header nav .container-fluid div li .navTienda {
+  background-color: rgb(96, 230, 91);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+header nav .container-fluid div li .navTienda:hover {
+  background-color: rgb(138, 247, 134);
+  color: rgba(2, 1, 1, 0.3);
+  transition: color 0.5s ease;
+}
+header nav .container-fluid div li .navTienda.active, header nav .container-fluid div li .navTienda.show {
+  background-color: rgb(138, 247, 134);
+  color: rgba(2, 1, 1, 0.3);
+  text-decoration: none;
+}
+
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* ------------------------------- ESTILOS DEL FOOTER ------------------------------- */
+footer {
+  background-color: red; /* Color de fondo */
+  color: #ffe4c4; /* Color del texto */
+  text-align: center;
+}
+footer .contenedorFooterData {
+  /* Para corregir espacio en blanco del lado derecho */
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 0px;
+}
+footer .contenedorFooterData .footerText .footerTextP {
+  /* Estilos para el texto de copyright */
+  margin: 20px;
+  font-family: "Barlow Condensed", sans-serif;
+}
+footer .contenedorFooterData .imgFooter .socialLink .logoSocialFooter {
+  /* Estilos para LOGOS de redes del footer */
+  /*Mixin de Height y Width*/
+  height: 30px;
+  width: 30px;
+  margin-bottom: 20px;
+}
+footer .contenedorFooterData .imgFooter .socialLink:hover {
+  opacity: 0.6; /* Cambia la opacidad al hacer hover sobre LOGOS de redes*/
+  transition: opacity 0.5s ease;
+}
+
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* ------------------------------- ESTILOS DE LA HTML NOSOTROS ------------------------------- */
+main .profContainer {
+  /* Propiedades del contenedor de las imagenes de la sección */
+  margin: 20px 0px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1); /* Sombra en la parte inferior */
+}
+main .profContainer div {
+  /* Espaciado y centrado de los contenedores */
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 10px;
+  /* Mixin- Margin y Padding */
+  justify-content: center; /* Para centrar los elementos horizontalmente */
+}
+main .profContainer div .faceImg {
+  /* Propiedades del contenedor de la img */
+  position: relative; /* Para que el texto pueda ubicarse encima de la img */
+  margin: 60px 30px;
+  min-height: 300px;
+  min-width: 300px;
+}
+main .profContainer div .faceImg .img-fluid {
+  /* Para que el hover de la img se adapte a la forma redonda */
+  border-radius: 50%;
+}
+main .profContainer div .faceImg .textImgEvento {
+  transition: opacity 0.3s;
+  /* Propiedades del contenedor del texto */
+  text-shadow: 2px 2px 5px rgba(1, 1, 1, 0.5);
+  font-family: "Barlow Condensed", sans-serif;
+  visibility: visible;
+  font-size: 130%;
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+main .profContainer div .faceImg .textImgEvento .nameImg {
+  line-height: 0.75; /* Ajusto el espaciado entre párrafos */
+  font-weight: bolder;
+  margin: 15px 0 3px 0;
+  color: #f5f5f5;
+}
+main .profContainer div .faceImg .textImgEvento .descNameImg {
+  letter-spacing: 1px; /* Ajusto el espaciado entre letras */
+  line-height: 1; /* Ajusto el espaciado entre párrafos */
+  font-style: italic;
+  font-size: 80%;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 5px rgb(1, 1, 1);
+}
+main .profContainer div .faceImg .textImgEvento span {
+  display: block; /* Para generar saltos de línea en los textos */
+}
+main .profContainer div .img-fluid:hover + .textImgEvento {
+  /* Cambia la opacidad de la img al hacer hover y aparece el texto encima*/
+  opacity: 100%;
+  transition: opacity 0.3s;
+  /*Para que se muestre el texto al hacer hover en la img */
+  visibility: visible;
+}
+main .profContainer div .textImgEvento:hover {
+  opacity: 100%;
+  /* Para que se mantenga visible al pasar por encima del texto de la img */
+  visibility: visible;
+}
+main .h2Asociados {
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 10px;
+  /* Mixin- Margin y Padding */
+  color: #3d1b12;
+}
+main .h2Asociados p {
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .containerMarca {
+  display: flex;
+  justify-content: center;
+  /* Propiedades del contenedor de marcas asociadas */
+  background-image: url("../images/marcaBg.webp");
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-position: center 80%; /* Para centrar la imagen */
+  background-repeat: no-repeat;
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .containerMarca .marcaImg {
+  display: none;
+}
+main .containerMarca .divAsociados {
+  /* Medidas del contenedor del carousel */
+  /*Mixin de Height y Width*/
+  height: 200px;
+  width: 80%;
+  justify-content: center;
+}
+main .containerMarca .divAsociados #carouselAsociados {
+  /* Medidas y centrado del contenedor del carousel */
+  display: flex;
+  height: 200px;
+  text-align: center;
+  justify-content: center;
+}
+main .containerMarca .divAsociados .carouselInnerAsociados {
+  width: 80%; /* Para que los botones de cambio de img no queden muy pegados al borde de la pantalla */
+}
+main .containerMarca .divAsociados .carousel-item {
+  width: 100%; /* Asegura que cada elemento del carousel tenga un ancho del 100% del contenedor */
+}
+main .containerMarca .divAsociados .carouselImgAsociados {
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  max-width: 100%; /* Mantiene el tamaño máximo */
+  max-height: 100%; /* Mantiene el tamaño máximo */
+}
+main .containerMarca .divAsociados .carouselImgAsociados .imgCarouselAsociados {
+  -o-object-fit: contain;
+     object-fit: contain; /* Para que se adapte al tamaño del contenedor */
+  max-width: 100%; /* Mantiene el tamaño máximo */
+  max-height: 100%; /* Mantiene el tamaño máximo */
+  height: 140px;
+}
+
+@media screen and (min-width: 770px) {
+  main .containerMarca {
+    /* Propiedades del contenedor de marcas asociadas */
+    background-image: url("../images/marcaBg.webp");
+    background-size: cover; /* Para cubrir todo el fondo */
+    background-position: center 80%; /* Para centrar la imagen */
+    background-repeat: no-repeat;
+    /*Mixin de Margin y Padding*/
+    margin: 0;
+    padding: 0;
+    /* Mixin- Margin y Padding */
+  }
+  main .containerMarca div {
+    /* Altura del contenedor */
+    height: 200px;
+  }
+  main .containerMarca div .marcaImg {
+    /* Hace visibles los logos horizontales */
+    visibility: visible;
+    position: relative;
+    /* Centrado de los logos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .containerMarca div .logoImg {
+    min-width: 30%;
+    /* Ajuste de tamaño de los logos */
+    width: 80%;
+    opacity: 70%;
+  }
+  main .containerMarca div .logoImg:hover {
+    /* Ajuste de tamaño de los logos */
+    opacity: 100%;
+    transition: opacity 0.3s;
+  }
+  main .divAsociados {
+    /* Para que se oculte el carousel de marcas */
+    display: none;
+  }
+}
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* Extend de estilos de botones */
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  background-color: #F58700;
+  border: #F58700;
+  border-radius: 5px; /* Corrige el radius del framework */
+  border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+  border-bottom-left-radius: 15px;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
+  /* Transparenta y cambia color de borde y fuente */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+/* ------------------------------- ESTILOS DE LA HTML EVENTOS ------------------------------- */
+main {
+  /* -------------------------- SECCIÓN EVENTOS -----------------------*/
+}
+main .h1Eventos {
+  margin-bottom: 0px; /* Corrección de valor del h1 */
+}
+main .containerEventos {
+  background-image: url("../images/eventosBg.webp"); /* IMG de fondo */
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat;
+  padding: 10px;
+  max-height: 900px; /* Altura máxima del contenedor */
+  overflow-y: auto; /* Habilita el desplazamiento vertical si el contenido es mayor que la altura */
+}
+main .containerEventos .textEvent {
+  /* Propiedades de los contenedores de eventos */
+  background-color: #f5f5f5;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  /*Mixin de Margin y Padding*/
+  margin: 20px 30px;
+  padding: 20px 0 0 0;
+  /* Mixin- Margin y Padding */
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  /* Mixin- Asigna curvas a las aristas */
+}
+main .containerEventos .textEvent .spanEvent {
+  /* Estilo de texto de la fecha del evento */
+  font-weight: bold;
+  display: block;
+}
+main .containerEventos .textEvent .buttonEnterateMas {
+  border: none; /* Borro el border default de button del bootstrap */
+  background-color: #F58700; /* Asigno color al button */
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 23px;
+  border-bottom-left-radius: 23px;
+  /* Mixin- Asigna curvas a las aristas */
+  /*Mixin de Height y Width*/
+  height: 50px;
+  width: 100%;
+}
+main .containerEventos .textEvent .buttonEnterateMas:hover {
+  /* Hover del botón para más información */
+  background-color: #e97100;
+}
+main .containerEventos .textEvent .buttonEnterateMas:active {
+  /* Active del botón para más información */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  transition: opacity 0s;
+}
+
+@media screen and (min-width: 600px) {
+  .textEvent:hover {
+    /* Contenedor de eventos al hacerle hover */
+    opacity: 100%;
+    transition: opacity 0.1s;
+    box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+  }
+}
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* Extend de estilos de botones */
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  background-color: #F58700;
+  border: #F58700;
+  border-radius: 5px; /* Corrige el radius del framework */
+  border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+  border-bottom-left-radius: 15px;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
+  /* Transparenta y cambia color de borde y fuente */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+/* ------------------------------- ESTILOS DE LA HTML CONTACTO ------------------------------- */
+.contactBg {
+  background-image: url("../images/runBg.webp"); /* Img de fondo de la sección */
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-position: center; /* Para centrar la imagen */
+  background-repeat: no-repeat; /* Para que no se repita la img */
+}
+.contactBg main {
+  /* -------------------------- SECCIÓN CONTACTO -----------------------*/
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa {
+  /* Para separar los contenedores entre si y de los bordes */
+  margin: 15px 15px 60px 15px;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .mapDiv {
+  /* Propiedades del fondo del contenedor del mapa */
+  /*Mixin de Height y Width*/
+  height: 340px;
+  width: 100%;
+  /*Mixin de Height y Width*/
+  background-color: rgba(245, 245, 245, 0.6705882353);
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  /* Propiedades del tamaño del mapa */
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .mapDiv .map {
+  /*Mixin de Height y Width*/
+  height: 100%;
+  width: 100%;
+  /*Mixin de Height y Width*/
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 15px 10px;
+  /* Mixin- Margin y Padding */
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .mapDiv:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.4s;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .datosDiv {
+  /* Propiedades del contenedor de datos de contacto */
+  background-color: rgba(245, 245, 245, 0.6705882353);
+  /*Mixin de Height y Width*/
+  height: 160px;
+  width: 100%;
+  /*Mixin de Height y Width*/
+  /*Mixin de Margin y Padding*/
+  margin: 10px 0 0 0;
+  padding: 10px 0;
+  /* Mixin- Margin y Padding */
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .datosDiv p {
+  /* Propiedades del contenedor de texto de datos de contacto */
+  /*Mixin de Margin y Padding*/
+  margin: 15px 0;
+  padding: 5px;
+  /* Mixin- Margin y Padding */
+  color: #ffe4c4;
+  background-color: #e97100;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .datosDiv p img {
+  /* Propiedades del icono del texto de datos de contacto */
+  height: 25px;
+  margin: 5px;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa .datosDiv:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.4s;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa p:hover {
+  background-color: #F58700;
+  transition: background-color 0.3s;
+}
+.contactBg main .containerContacto .containerNosotros .containerInternoMapa p:hover img {
+  animation: 1s;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 {
+  /* Espaciado entre contenedores */
+  margin: 15px;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv {
+  /* Propiedades del contenedor del form */
+  height: 510px;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  background-color: rgba(245, 245, 245, 0.6705882353);
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 15px;
+  /* Mixin- Margin y Padding */
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv h2 {
+  /* Corrección de valores del h2 */
+  color: #ffe4c4;
+  background-color: #e97100;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros {
+  /* Asigno estilos a los input */
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .containerInputNombre {
+  /* Corrección de valores heredados del framework */
+  padding-left: 0;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .containerInputEmail {
+  /* Corrección de valores heredados del framework */
+  padding-right: 0;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .inputNosotros {
+  /* Opacidad del contenedor del form */
+  opacity: 60%;
+  transition: opacity 0.3s;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .inputNosotros:hover {
+  /* Hover de los input */
+  opacity: 100%;
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .inputNosotros:focus {
+  /* Cuando está posicioinado sobre el input */
+  opacity: 100%;
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+  border: 2px solid #ffab45;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .inputNosotros:active {
+  /* Corrección de valores heredados del framework */
+  opacity: 100%;
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+  border: 2px solid #F58700;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .textareaNosotros {
+  /* Para que el text area del form no sea ajustable */
+  resize: none;
+  height: 190px;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros {
+  /* Propiedades de los botones */
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoS, .contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoR {
+  display: inline;
+  background-color: #F58700;
+  border: #F58700;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 15px;
+  /*Mixin de estilos de vértices radiales*/
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoS:hover, .contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoR:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoS:active, .contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv .formNosotros .buttonContainerNosotros .buttonContactoR:active {
+  border: 2px solid #e97100;
+  color: #e97100;
+  background-color: transparent;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  font-weight: 500;
+}
+.contactBg main .containerContacto .containerNosotros .containerForm2 .formDiv:hover {
+  background-color: #f5f5f5;
+  transition: background-color 0.3s;
+}
+
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* Extend de estilos de botones */
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  background-color: #F58700;
+  border: #F58700;
+  border-radius: 5px; /* Corrige el radius del framework */
+  border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+  border-bottom-left-radius: 15px;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
+  /* Transparenta y cambia color de borde y fuente */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+/* ------------------------------- ESTILOS DE LA HTML GALERÍA ------------------------------- */
+main {
+  /*Propiedades de contenedores para pantallas cel*/
+}
+main .containerGaleria {
+  /*Propiedades de los contenedores de galerías*/
+  background-color: transparent;
+  height: auto;
+  width: 100%;
+}
+main .containerGaleria h2 {
+  margin: 50px 0 20px 0;
+  /*Propiedades del contenedor del h2 de las galerías*/
+  background-color: #e97100;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+main .containerGaleria h2 img {
+  /* Medidas del logo de las galerías*/
+  height: 70px;
+  margin: 10px;
+}
+main .containerGaleria h2 .h2TitleGaleria {
+  /* Propiedades del título del h2 del contenedor de imágenes*/
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  font-size: medium;
+  background-color: #F58700;
+}
+main .containerGaleria .visibleGaleriaPodios, main .containerGaleria .visibleGaleriaRunning, main .containerGaleria .visibleGaleriaTravel {
+  /*Para separar el carrousel del contenedor*/
+  padding: 10px;
+}
+main .containerGaleria .containerGaleriaPodios, main .containerGaleria .containerGaleriaRunning, main .containerGaleria .containerGaleriaTravel {
+  /*Para que no se vean el resto de la imagenes ademas del carrousel*/
+  display: none;
+}
+
+/*Media query para pantallas tablet */
+@media screen and (min-width: 600px) {
+  main .containerGaleria {
+    /*Tamaño del contenedor de img */
+    height: 1050px;
+  }
+  main .containerGaleria .visibleGaleriaPodios, main .containerGaleria .visibleGaleriaRunning, main .containerGaleria .visibleGaleriaTravel {
+    /*Invisibiliza el carousel */
+    display: none;
+  }
+  main .containerGaleria .containerGaleriaPodios, main .containerGaleria .containerGaleriaRunning, main .containerGaleria .containerGaleriaTravel {
+    /* Propiedades de las img */
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat 2, 50%;
+    grid-template-rows: 30% 50% 30% 40% 40%;
+    /* Distribución de las img */
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios1, main .containerGaleria .containerGaleriaRunning .imgPodios1, main .containerGaleria .containerGaleriaTravel .imgPodios1 {
+    grid-row: span 1;
+    grid-column: 1;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios2, main .containerGaleria .containerGaleriaRunning .imgPodios2, main .containerGaleria .containerGaleriaTravel .imgPodios2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios3, main .containerGaleria .containerGaleriaRunning .imgPodios3, main .containerGaleria .containerGaleriaTravel .imgPodios3 {
+    grid-column: 1;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios4, main .containerGaleria .containerGaleriaRunning .imgPodios4, main .containerGaleria .containerGaleriaTravel .imgPodios4 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios7, main .containerGaleria .containerGaleriaRunning .imgPodios7, main .containerGaleria .containerGaleriaTravel .imgPodios7 {
+    grid-column: span 3;
+  }
+  main .containerGaleria .containerGaleriaPodios img, main .containerGaleria .containerGaleriaRunning img, main .containerGaleria .containerGaleriaTravel img {
+    opacity: 90%;
+    /*Mixin de Height y Width*/
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  main .containerGaleria .containerGaleriaPodios img:hover, main .containerGaleria .containerGaleriaRunning img:hover, main .containerGaleria .containerGaleriaTravel img:hover {
+    /* Efectos de hover sobre las img */
+    transform: scale(1.03); /* Escala la imagen ligeramente al pasar el mouse sobre ella */
+    opacity: 100%;
+    transition: opacity 0.2s;
+  }
+}
+/*Media query para pantallas desktop */
+@media screen and (min-width: 1024px) {
+  main .containerGaleria {
+    /*Tamaño del contenedor de img */
+    height: 850px;
+  }
+  main .containerGaleria .visibleGaleriaPodios, main .containerGaleria .visibleGaleriaRunning, main .containerGaleria .visibleGaleriaTravel {
+    /*Invisibiliza el carousel */
+    display: none;
+  }
+  main .containerGaleria .containerGaleriaPodios, main .containerGaleria .containerGaleriaRunning, main .containerGaleria .containerGaleriaTravel {
+    display: grid;
+    height: 50vh;
+    grid-template-columns: repeat 3, 25%;
+    grid-template-rows: 40% 60% 50%;
+    /* Distribución de las img */
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios1, main .containerGaleria .containerGaleriaRunning .imgPodios1, main .containerGaleria .containerGaleriaTravel .imgPodios1 {
+    grid-row: span 1;
+    grid-column: 1;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios2, main .containerGaleria .containerGaleriaRunning .imgPodios2, main .containerGaleria .containerGaleriaTravel .imgPodios2 {
+    grid-column: 2;
+    grid-row: span 2;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios3, main .containerGaleria .containerGaleriaRunning .imgPodios3, main .containerGaleria .containerGaleriaTravel .imgPodios3 {
+    grid-column: 3;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios4, main .containerGaleria .containerGaleriaRunning .imgPodios4, main .containerGaleria .containerGaleriaTravel .imgPodios4 {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  main .containerGaleria .containerGaleriaPodios .imgPodios7, main .containerGaleria .containerGaleriaRunning .imgPodios7, main .containerGaleria .containerGaleriaTravel .imgPodios7 {
+    grid-column: span 2;
+  }
+}
+/* ------------------------------- ESTILOS DE LA HTML PRÓXIMA WEB ------------------------------- */
+.bg-body-customProx {
+  /* Cambia el color del Body */
+  background-color: #F58700;
+}
+
+.proxMain .proxImgCont {
+  /* Para centrar la imágen */
+  display: flex;
+  justify-content: center;
+}
+.proxMain .proxImgCont .proxImg {
+  margin: 80px; /* Espaciado de la imagen */
+}
+.proxMain .proxH1 {
+  background-color: transparent; /* Estilos del h1 */
+}
+.proxMain .proxH2 {
+  /* Estilos del h2 */
+  background-color: transparent;
+  font-size: medium;
+  margin-bottom: 200px;
+}
+
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* Extend de estilos de botones */
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  background-color: #F58700;
+  border: #F58700;
+  border-radius: 5px; /* Corrige el radius del framework */
+  border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+  border-bottom-left-radius: 15px;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
+  /* Transparenta y cambia color de borde y fuente */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+.aside {
+  position: fixed;
+  top: 100px;
+  width: 12%;
+  height: 100%;
+  background: linear-gradient(to left, #F58700, #e97100);
+  padding: 7% 0;
+  overflow-y: auto;
+  z-index: 100;
+}
+.aside .asideBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aside .asideBox .asideBoxIcon {
+  margin-bottom: 10px;
+  padding: 25% 0;
+}
+.aside .asideBox .asideBoxIcon .iconAsideBox {
+  display: block;
+  text-align: center;
+}
+.aside .asideBox .asideBoxIcon .iconAsideBox .iconImgAsideBox {
+  width: 50%;
+  height: 50%;
+}
+.aside .asideBox .asideBoxIcon .iconAsideBox .iconImgAsideBox:hover {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.mainTienda {
+  padding: 0 2% 0 14%;
+  margin-top: 25%;
+}
+.mainTienda .carritoDatosComprados {
+  background-color: #e97100;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin-bottom: 20px;
+}
+.mainTienda .carritoDatosComprados .carritoProductosC0omprados, .mainTienda .carritoDatosComprados .carritoCantidadComprados, .mainTienda .carritoDatosComprados .carritoMembresiaComprados {
+  /* Propiedades del título del h2 del contenedor de imágenes*/
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  font-size: medium;
+  height: auto;
+  width: 180px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  margin: 0;
+}
+.mainTienda .carritoDatosComprados .carritoProductosC0omprados p, .mainTienda .carritoDatosComprados .carritoCantidadComprados p, .mainTienda .carritoDatosComprados .carritoMembresiaComprados p {
+  margin: 0;
+}
+.mainTienda .carritoDatosComprados .carritoTotalComprados {
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  font-size: medium;
+  height: auto;
+  width: auto;
+  background-color: rgb(96, 230, 91);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 0;
+}
+.mainTienda .carritoDatosComprados .carritoTotalComprados p {
+  font-size: xx-large;
+  margin: 0;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba {
+  align-items: center;
+  display: flex;
+  font-size: small;
+  flex-wrap: wrap-reverse;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .descCarritoProductosComprados,
+.mainTienda .carritoDatosComprados .contenedorPrueba .descCarritoCantidadComprados,
+.mainTienda .carritoDatosComprados .contenedorPrueba .descCarritoMembresiaComprados {
+  background: linear-gradient(to right, #e97100, #F58700, #e97100);
+  margin: 3px;
+  font-weight: 400;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoProductosComprados,
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoCantidadComprados,
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoMembresiaComprados {
+  background: linear-gradient(to right, #e97100, #F58700);
+  margin: 3px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  padding: 3px;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoProductosComprados p,
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoCantidadComprados p,
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoMembresiaComprados p {
+  margin: 1px;
+  font-size: medium;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Alinea el texto al centro */
+  width: 60%;
+  background: linear-gradient(to right, #e97100, #F58700, #e97100);
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .descCarritoTotalComprados {
+  font-size: x-large;
+  color: #ffe4c4;
+  margin: 0;
+  padding: 8px;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .carritoTotalComprados {
+  padding: 8px;
+  font-size: x-large;
+  color: rgba(2, 1, 1, 0.411);
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer {
+  display: flex;
+  font-size: small;
+  margin: 4px;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abonarCarritoContainer, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abrirCarritoBtn, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .pagarBoton {
+  color: #ffe4c4;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(96, 230, 91);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 8px;
+  width: 100%;
+  height: 50px;
+  padding: 10;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abonarCarritoContainer .iconBotonAbonar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abrirCarritoBtn .iconBotonAbonar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .pagarBoton .iconBotonAbonar {
+  width: 50%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abonarCarritoContainer .textAbonar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abrirCarritoBtn .textAbonar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .pagarBoton .textAbonar {
+  margin: 0;
+  padding: 0;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .abrirCarritoBtn:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.5s ease;
+  color: rgba(2, 1, 1, 0.384);
+  transition: color 0.2s ease;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  cursor: pointer;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoContainer, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoBtn {
+  color: #ffe4c4;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(230, 91, 91);
+  border-top-left-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 0;
+  width: 100%;
+  height: 50px;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoContainer .iconBotonVaciar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoBtn .iconBotonVaciar {
+  width: 50%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoContainer .textQuitar, .mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoBtn .textQuitar {
+  margin: 0;
+  padding: 0;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .pagarCarritoBtn:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.5s ease;
+  color: rgba(2, 1, 1, 0.384);
+  transition: color 0.2s ease;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  cursor: pointer;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .carritoTotalContainer .botonesAbonarVaciarContainer .vaciarCarritoBtn:hover {
+  background-color: rgb(252, 162, 162);
+  transition: background-color 0.5s ease;
+  color: rgba(2, 1, 1, 0.384);
+  transition: color 0.2s ease;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+  cursor: pointer;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .userTiendaContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .userTiendaContainer .imgAvatarTienda {
+  height: 40px;
+  margin: 3px;
+}
+.mainTienda .carritoDatosComprados .contenedorPrueba .userTiendaContainer .loginBoton, .mainTienda .carritoDatosComprados .contenedorPrueba .userTiendaContainer .registrarBoton {
+  color: #ffe4c4;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+.mainTienda .seccionTopCarritoContainer {
+  display: flex;
+  justify-content: center;
+  text-align: right;
+}
+.mainTienda .seccionTopCarritoContainer .seccionTopCarrito {
+  color: #e97100;
+}
+.mainTienda .seccionTopCarritoContainer .seccionTopCarrito .productosComprados {
+  border: 1px solid #e97100;
+  border-bottom: 0px;
+}
+.mainTienda .seccionTopCarritoContainer .seccionTopCarrito .cantidadComprados {
+  border: 1px solid #e97100;
+  border-bottom: 0px;
+}
+.mainTienda .seccionTopCarritoContainer .seccionTopCarrito .contenedorTotalCompra {
+  border: 1px solid #e97100;
+  font-weight: 600;
+  background-color: #e97100;
+  color: #f5f5f5;
+}
+.mainTienda .seccionTopCarritoContainer .seccionTopCarrito .iconCarroSeccionTopCarrito {
+  display: flex;
+  width: 20%;
+}
+.mainTienda .h2Membresias, .mainTienda .h2Indumentaria, .mainTienda .h2Articulos, .mainTienda .h2Modal {
+  margin: 20px 0 0 0;
+  /*Propiedades del contenedor del h2 de las galerías*/
+  background: linear-gradient(to right, #e97100, #F58700, #e97100);
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  width: 100%;
+  scroll-margin-top: 140px; /* Ajusta este valor según la altura de tu header */
+}
+.mainTienda .h2Membresias img, .mainTienda .h2Indumentaria img, .mainTienda .h2Articulos img, .mainTienda .h2Modal img {
+  height: 40px;
+  margin: 3px;
+}
+.mainTienda .h2Membresias .tiendaIconH2, .mainTienda .h2Indumentaria .tiendaIconH2, .mainTienda .h2Articulos .tiendaIconH2, .mainTienda .h2Modal .tiendaIconH2 {
+  /* Propiedades del título del h2 del contenedor de imágenes*/
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  font-size: medium;
+  background-color: #F58700;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 0;
+}
+.mainTienda .h1Tienda {
+  margin: 0;
+  padding: 0;
+}
+.mainTienda #productosMembresias {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0; /* Centra el contenedor */
+}
+.mainTienda #productosMembresias .idTiendaContainer {
+  width: auto;
+  height: auto;
+  background-color: #f5f5f5;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idItemContainer {
+  max-width: 200px;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .idItemImgName {
+  color: #e97100;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+  font-weight: 500;
+  font-size: small;
+  margin: 0;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .idItemImgName p {
+  margin: 0;
+  padding: 8px;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .idItemImgPrecio {
+  color: #f5f5f5;
+  background-color: rgb(96, 230, 91);
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 8px;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .idItemImgPrecio p {
+  color: rgba(2, 1, 1, 0.3);
+  margin: 0;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .idItemImgTextDesc {
+  color: #e97100;
+  margin: 0;
+  padding: 8px 0;
+  font-size: 10px;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .mesesContenedorTienda {
+  display: flex;
+  justify-content: center;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .mesesContenedorTienda .inputMeses {
+  display: none;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .mesesContenedorTienda .labelInputMeses {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #e97100;
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  margin: 0 16px;
+  cursor: pointer;
+}
+.mainTienda #productosMembresias .idTiendaContainer .idTextContainer .mesesContenedorTienda .inputMeses:checked + .labelInputMeses {
+  background-color: #e97100;
+  color: #fff;
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda {
+  display: flex;
+  align-items: center;
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonComprar {
+  border: none;
+  background-color: rgb(96, 230, 91);
+  width: 80%;
+  height: 40px;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  color: #f5f5f5;
+  font-weight: bolder;
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonComprar .textBotonComprar, .mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonComprar .textBotonBorrar {
+  width: 100%;
+  margin: 0;
+  color: #ffe4c4;
+  font-weight: bolder;
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonBorrarItem {
+  border: none;
+  display: flex;
+  right: 0; /* Ajusta el botón al extremo derecho */
+  background-color: rgb(230, 91, 91);
+  height: 40px;
+  width: 20%;
+  justify-content: center;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonBorrarItem .botonQuitarId {
+  cursor: pointer;
+  border: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0);
+}
+.mainTienda #productosMembresias .idTiendaContainer .contenedorBotonesTienda .botonBorrarItem .tachoTienda {
+  width: auto;
+  height: 100%;
+}
+.mainTienda #productosMembresias .idTiendaContainer .botonComprar:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.3s ease;
+  color: rgba(2, 1, 1, 0.3);
+  transition: color 0.3s ease;
+}
+.mainTienda #productosMembresias .idTiendaContainer .botonBorrarItem:hover {
+  background-color: rgb(252, 162, 162);
+  transition: background-color 0.3s ease;
+}
+.mainTienda #productosMembresias .idItemContainer:hover {
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+.mainTienda #productosIndumentaria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0; /* Centra el contenedor */
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer {
+  max-width: 200px;
+  margin: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaTextContainer .indumentariaItemImgName {
+  color: #e97100;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+  font-weight: 500;
+  font-size: small;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaTextContainer .indumentariaItemImgName p {
+  margin: 0;
+  padding: 8px;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaTextContainer .indumentariaItemImgPrecio {
+  color: #f5f5f5;
+  background-color: rgb(96, 230, 91);
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 8px;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaTextContainer .indumentariaItemImgPrecio p {
+  color: rgba(2, 1, 1, 0.3);
+  margin: 0;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaTextContainer .indumentariaItemImgTextDesc {
+  color: #e97100;
+  padding-top: 8px;
+  margin: 0;
+  font-size: 10px;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .tallesContenedorTienda {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .tallesContenedorTienda .inputTalles {
+  display: none;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .tallesContenedorTienda .labelInputTalles {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #e97100;
+  color: #e97100;
+  font-weight: bold;
+  margin-right: 8px;
+  cursor: pointer;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .tallesContenedorTienda .inputTalles:checked + .labelInputTalles {
+  background-color: #e97100;
+  color: #fff;
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .indumentariaImg {
+  align-items: center;
+  display: flex;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda {
+  display: flex;
+  align-items: center;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda .botonComprar {
+  background-color: rgb(96, 230, 91);
+  width: 80%;
+  height: 40px;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  border: none;
+  color: #f5f5f5;
+  font-weight: bolder;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda .botonComprar .textBotonComprar, .mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda .botonComprar .textBotonBorrar {
+  margin: 0;
+  color: #ffe4c4;
+  font-weight: bolder;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda .botonQuitarId {
+  display: flex;
+  right: 0; /* Ajusta el botón al extremo derecho */
+  background-color: rgb(230, 91, 91);
+  height: 40px;
+  padding: 5px 0;
+  width: 20%;
+  cursor: pointer;
+  justify-content: center;
+  border: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .contenedorBotonesTienda .botonQuitarId .tachoTienda {
+  width: auto;
+  height: 100%;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .botonComprar:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.3s ease;
+  color: rgba(2, 1, 1, 0.3);
+  transition: color 0.3s ease;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer .botonQuitarId:hover {
+  background-color: rgb(252, 162, 162);
+  transition: background-color 0.3s ease;
+}
+.mainTienda #productosIndumentaria .indumentariaTiendaContainer .indumentariaItemContainer:hover {
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+
+#productosArticulos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0; /* Centra el contenedor */
+}
+#productosArticulos .articuloTiendaContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer {
+  max-width: 200px;
+  justify-content: center;
+  height: auto;
+  margin: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 15px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloTextContainer .articuloItemImgName {
+  color: #e97100;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.062);
+  font-weight: 500;
+  font-size: small;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloTextContainer .articuloItemImgName p {
+  margin: 0;
+  padding: 8px;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloTextContainer .articuloItemImgPrecio {
+  color: #f5f5f5;
+  background-color: rgb(96, 230, 91);
+  font-weight: bold;
+  font-size: large;
+  margin-bottom: 8px;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloTextContainer .articuloItemImgPrecio p {
+  color: rgba(2, 1, 1, 0.3);
+  margin: 0;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloTextContainer .articuloItemImgTextDesc {
+  color: #e97100;
+  padding: 8px;
+  margin: 0;
+  font-size: 10px;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .articuloImg {
+  align-items: center;
+  display: flex;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda {
+  display: flex;
+  align-items: center;
+  border: none;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda .botonComprar {
+  border: none;
+  background-color: rgb(96, 230, 91);
+  width: 80%;
+  height: 40px;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 10px;
+  color: #f5f5f5;
+  font-weight: bolder;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda .botonComprar .textBotonComprar, #productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda .botonComprar .textBotonBorrar {
+  margin: 0;
+  color: #ffe4c4;
+  font-weight: bolder;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda .botonQuitarId {
+  border: none;
+  display: flex;
+  right: 0; /* Ajusta el botón al extremo derecho */
+  background-color: rgb(230, 91, 91);
+  height: 40px;
+  padding: 5px 0;
+  width: 20%;
+  cursor: pointer;
+  justify-content: center;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 0;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .contenedorBotonesTienda .botonQuitarId .tachoTienda {
+  width: auto;
+  height: 100%;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .botonComprar:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.3s ease;
+  color: rgba(2, 1, 1, 0.3);
+  transition: color 0.3s ease;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer .botonQuitarId:hover {
+  background-color: rgb(252, 162, 162);
+  transition: background-color 0.3s ease;
+}
+#productosArticulos .articuloTiendaContainer .articuloItemContainer:hover {
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+
+.popoverEliminarProducto, .popoverVaciarCarrito {
+  display: none;
+  position: fixed;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: linear-gradient(to right, #e65b5b, #ec8b8b, rgb(230, 91, 91));
+  border: 2px solid rgb(238, 45, 45);
+  color: #ffe4c4;
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+.popover-inner, .popover-inner {
+  max-width: 100%; /* Ancho máximo del popover */
+}
+
+.popoverPagarCarrito {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: linear-gradient(to right, #60e65b, #8af786, rgb(96, 230, 91));
+  border: 2px solid rgb(56, 175, 52);
+  color: rgba(2, 1, 1, 0.3);
+  font-weight: bolder;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+.popoverVaciarCarrito .popover-inner .popover-body {
+  font-size: 14px;
+}
+.popoverVaciarCarrito .popover-inner .botonConfirmarVaciado {
+  border: none;
+  background-color: rgb(238, 45, 45);
+  margin: 4px;
+}
+.popoverVaciarCarrito .popover-inner .botonCancelarVaciado {
+  margin: 4px;
+  border: none;
+}
+.popoverVaciarCarrito .popover-inner .btn:active {
+  background-color: rgb(236, 139, 139);
+  border: none;
+}
+.popoverVaciarCarrito .popover-inner .btn:hover {
+  background-color: rgb(230, 91, 91);
+  border: none;
+}
+
+.popoverPagarCarrito .popover-body {
+  font-size: 14px;
+}
+.popoverPagarCarrito .botonConfirmarPago {
+  border: none;
+  background-color: rgb(96, 230, 91);
+  margin-right: 10px;
+}
+.popoverPagarCarrito .botonCancelarPago {
+  border: none;
+}
+.popoverPagarCarrito .btn:active {
+  background-color: rgb(138, 247, 134);
+  border: none;
+}
+.popoverPagarCarrito .btn:hover {
+  background-color: #38af34;
+  border: none;
+}
+
+.iconoCarrito {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #F58700; /* Color de fondo del icono */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 20;
+}
+
+.iconoCarrito:hover {
+  background-color: #e97100;
+  transition: background-color 0.15s ease-in;
+}
+
+.estela-roja {
+  outline: 10px solid rgba(230, 91, 91, 0.6980392157);
+  transition: outline 0.3s ease-out;
+}
+
+.estela-verde {
+  outline: 10px solid rgba(96, 230, 91, 0.6862745098);
+  transition: outline 0.3s ease-out;
+}
+
+.iconoCarrito img {
+  width: 40px; /* Ajusta el tamaño del icono dentro del círculo */
+}
+
+/* Estilo del modal */
+.modalCarrito {
+  border: none;
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 10%;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+}
+.modalCarrito .modalContenido {
+  background-color: #fefefe;
+  margin: 12% auto; /* Centrado vertical y horizontal */
+  padding: 20px;
+  width: 80%;
+  max-height: 500px;
+  position: relative;
+  border-radius: 8px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.modalCarrito .modalContenido .carritoModalImg {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin: 8px;
+}
+.modalCarrito .modalContenido #costoFinalModal p {
+  padding: 0;
+  margin: 0;
+}
+.modalCarrito .modalContenido .carritoModalPrecioFinal {
+  font-weight: bold;
+  font-size: smaller;
+  text-align: center;
+  color: rgba(2, 1, 1, 0.3);
+  margin: 0;
+  padding: 0;
+}
+.modalCarrito .modalContenido .carritoModalPrecioTotal {
+  background-color: rgb(96, 230, 91);
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  color: rgba(2, 1, 1, 0.3);
+}
+.modalCarrito .modalContenido .carritoModalPrecioTotal p {
+  color: rgba(2, 1, 1, 0.3);
+  margin: 0;
+}
+.modalCarrito .modalContenido .h2Modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*Propiedades del contenedor del h2 de las galerías*/
+  background: linear-gradient(to right, #e97100, #F58700, #e97100);
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 12px;
+  scroll-margin-top: 140px; /* Ajusta este valor según la altura de tu header */
+}
+.modalCarrito .modalContenido .h2Modal img {
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+}
+.modalCarrito .modalContenido .h2Modal .tiendaIconH2 {
+  /* Propiedades del título del h2 del contenedor de imágenes*/
+  color: #f5f5f5;
+  font-size: medium;
+  background-color: #F58700;
+  margin: 0;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+}
+.modalCarrito .modalContenido .modalContenidoTextos {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito {
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  display: flex;
+  align-items: center;
+  margin: 8px 10px;
+  padding: 3px;
+  font-size: small;
+  border-radius: 8px;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorImgCarrito {
+  display: flex;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .contenedorCantidadProdcutosCarrito {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .botonQuitarDelCarrito, .modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .botonAumentarCantidad {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  border-radius: 50%;
+  border: none;
+  color: #f5f5f5;
+  font-weight: bolder;
+  font-size: l;
+  padding: 0;
+  margin: 0;
+  background-color: #e97100;
+  cursor: pointer;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .botonQuitarDelCarrito p, .modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .botonAumentarCantidad p {
+  color: rgb(0, 0, 0);
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .h3ProductosCarrito {
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .textoH3PruductosCarrito {
+  padding: 0px 6px;
+  border-radius: 4px;
+  margin: 3px 6px;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .textoH3PruductosCarritoPrecio {
+  margin: 0;
+  padding: 0px 6px;
+  margin: 3px 10px;
+  border-radius: 4px;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito .contenedorDatosProductoCarrito .textoH3PruductosCarritoTotal {
+  margin: 0;
+  padding: 0px 6px;
+  margin: 3px 10px;
+  border-radius: 4px;
+}
+.modalCarrito .modalContenido .modalContenidoTextos .contenedorProductosCarrito:hover {
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+.modalCarrito .cerrarModal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #888;
+  cursor: pointer;
+}
+.modalCarrito .cerrarModal:hover,
+.modalCarrito .botonCerrarModal:hover {
+  color: #000;
+}
+.modalCarrito .contenedorBotonesModal {
+  display: flex;
+}
+.modalCarrito .contenedorBotonesModal .pagarBoton {
+  border: none;
+  background-color: rgb(96, 230, 91);
+  width: 70%;
+  height: 50px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  cursor: pointer;
+  color: #f5f5f5;
+  font-weight: bolder;
+}
+.modalCarrito .contenedorBotonesModal .vaciarCarritoBtn {
+  border: none;
+  display: flex;
+  right: 0; /* Ajusta el botón al extremo derecho */
+  background-color: rgb(230, 91, 91);
+  height: 50px;
+  width: 32%;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5;
+  font-weight: bolder;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.modalCarrito .contenedorBotonesModal .vaciarCarritoBtn .vaciarCarritoImgBtn {
+  height: 90%;
+}
+.modalCarrito .contenedorBotonesModal .vaciarCarritoBtn:hover {
+  background-color: rgb(252, 162, 162);
+  transition: background-color 0.3s ease;
+  color: rgba(2, 1, 1, 0.3);
+}
+.modalCarrito .contenedorBotonesModal .pagarBoton:hover {
+  background-color: rgb(138, 247, 134);
+  transition: background-color 0.3s ease;
+  color: rgba(2, 1, 1, 0.3);
+  transition: color 0.3s ease;
+}
+.modalCarrito .botonCerrarModal {
+  background: linear-gradient(to right, #e97100, #F58700, #e97100);
+  color: #fff;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 6000px) {
+  .mainTienda {
+    margin-top: 7%;
+  }
+}
+@media screen and (max-width: 1900px) {
+  .mainTienda {
+    margin-top: 9%;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .mainTienda {
+    margin-top: 10%;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .mainTienda {
+    margin-top: 13%;
+  }
+  .userTiendaContainer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .mainTienda {
+    margin-top: 20%;
+  }
+  .userTiendaContainer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .mainTienda {
+    margin-top: 30%;
+  }
+  .contenedorPrueba {
+    justify-content: center;
+  }
+  .userTiendaContainer {
+    justify-content: center;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .modalCarrito {
+    top: 0%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .indumentariaItemContainer, .articuloItemContainer, .idItemContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .aside {
+    width: 100%;
+    height: auto;
+    padding: 12% 0 3% 0;
+  }
+  .aside .asideBox {
+    flex-direction: row;
+  }
+  .aside .asideBox .asideBoxIcon {
+    padding: 0 10%;
+  }
+  .aside .asideBox .asideBoxIcon .iconAsideBox .iconImgAsideBox {
+    height: 100%;
+    width: 100%;
+  }
+  .mainTienda {
+    margin-top: 65%;
+    padding: 0% 2% 0 2%;
+  }
+  .indumentariaItemContainer, .idItemContainer, .articuloItemContainer {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 346px) {
+  .aside {
+    padding: 40% 0 3% 0;
+  }
+  .indumentariaItemContainer, .idItemContainer, .articuloItemContainer {
+    width: 100%;
+  }
+  .mainTienda {
+    margin-top: 97%;
+  }
+}
+@media screen and (max-width: 250px) {
+  .aside {
+    padding: 55% 0 3% 0;
+  }
+  .mainTienda {
+    margin-top: 120%;
+  }
+}
+/* PALETA DE COLORES */
+/* FUENTES */
+/* SHADOW BOX */
+/* Back up de colores; */
+/* $colorBackground: #faebd7 */
+/* Asigna Margin y Padding */
+/* Asignar Height y Width */
+/*Mixin de estilos de vértices radiales*/
+/* Extend de estilos de botones */
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  background-color: #F58700;
+  border: #F58700;
+  border-radius: 5px; /* Corrige el radius del framework */
+  border-top-right-radius: 15px; /* Asigno bordes solo a 2 vértices */
+  border-bottom-left-radius: 15px;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:hover {
+  opacity: 0.6;
+  transition: opacity 0.5s ease;
+}
+
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
+  /* Transparenta y cambia color de borde y fuente */
+  background-color: transparent;
+  border: 1px solid #F58700;
+  color: #F58700;
+  box-shadow: 0px 2px 15px rgba(1, 1, 1, 0.5);
+}
+
+.bg-body-custom {
+  /* Características del Body */
+  background-color: #fff5ee;
+}
+
+@media screen and (max-width: 2024px) { /* Ajuste de la posición de los elementos para que no se superponga el header */
+  main {
+    padding-top: 170px;
+  }
+}
+@media screen and (max-width: 600px) { /* Ajuste de la posición de los elementos para que no se superponga el header */
+  main {
+    padding-top: 140px;
+  }
+}
+/* -------------------------------- Estilo de Scroll bar ------------------------------ */
+::-webkit-scrollbar {
+  /* Estilos del back del scrollbar */
+  width: 15px; /* Ancho del scrollbar vertical */
+  height: 15px; /* Alto del scrollbar horizontal */
+  background-color: #ffe4c4;
+}
+
+::-webkit-scrollbar-button {
+  /* Estilos de las flechas */
+  background-color: #F58700; /* Color del scrollbar */
+  border: 2px solid #ffab45;
+  border-radius: 100%;
+  height: 15px;
+  width: 15px;
+}
+
+::-webkit-scrollbar-button:hover {
+  /* Hover de las flechas */
+  background-color: #e97100;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+}
+
+::-webkit-scrollbar-button:active {
+  /* Active de las flechas */
+  background-color: #ffab45;
+}
+
+::-webkit-scrollbar-thumb {
+  /* Estilo de la barra */
+  background-color: #F58700; /* Color del scrollbar */
+  border: 2px solid #ffab45;
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Hover de la barra */
+  background-color: #e97100;
+  -webkit-transition: background-color 0.6s;
+  transition: background-color 0.6s;
+}
+
+::-webkit-scrollbar-thumb:active {
+  /* Active de la barra */
+  background-color: #ffab45;
+}
+
+/* -------------------------------- FINAL Estilo de Scroll bar ------------------------------ */
+/* ------------------------------- ESTILOS DE LA HTML INDEX ------------------------------- */
+main {
+  /* Para eliminar el espacio en blanco que queda en el lado derecho de los contenedores por los estilos heredados del framework*/
+}
+main .row {
+  margin: 0px;
+}
+main h1, main h2 { /* Estilos de los títulos h1 y h2 */
+  background-color: #ffab45;
+  text-align: center;
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffe4c4;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+main {
+  /* ---------------- Texto sobre Imágen de bienvenida INDEX ---------------*/
+}
+main .indeximg {
+  position: relative;
+  width: 100%;
+  margin-top: -130px;
+  overflow: hidden;
+  z-index: -1;
+}
+main .indeximg .imgIndexWelcome {
+  /* Tamaño de la imagen de bienvenida */
+  /*Mixin de Height y Width*/
+  height: auto;
+  width: 100%;
+  /*Mixin de Height y Width*/
+  display: block;
+}
+main .indeximg .overlay { /* Texto sobre Imágen de bienvenida INDEX */
+  width: 100%;
+  position: absolute;
+  top: 95.5%; /* Posicionamiento sobre la imágen */
+  left: 51%; /* Posicionamiento sobre la imágen */
+  transform: translate(-50%, -50%); /* Posicionamiento sobre la imágen */
+}
+main .indeximg .overlay h1 {
+  /* Corrección de propiedades del h1 */
+  background-color: transparent;
+  color: #fff5ee;
+  display: flex;
+  font-size: 10vw;
+  font-weight: bolder;
+}
+@media screen and (max-width: 600px) {
+  main { /* Ajuste de la posición de la imágen principal para que no se superponga el header */ }
+  main .indeximg {
+    padding-top: 100px;
+  }
+}
+main {
+  /* ----------------------- Sección INDEX/SHOP ----------------------- */
+}
+main .containerIndexShop {
+  /* Propiedades del contenedor de sección SHOP */
+  /*Mixin de Margin y Padding*/
+  margin: 20px 0 20px 0;
+  padding: 30px;
+  /* Mixin- Margin y Padding */
+}
+main .containerIndexShop div {
+  /* Redondeado de aristas */
+  border-radius: 30px;
+}
+main .containerIndexShop div .divShopIndex {
+  /* Propiedades del contenedor del carrousel */
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+  /*Mixin de Height y Width*/
+  height: 300px;
+  width: 450px;
+}
+main .containerIndexShop div .divShopIndex img {
+  /* Para que la imagen ocupe todo el espacio del contenedor */
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .containerIndexShop div .textShopIndex {
+  /* Propiedades del contenedor del cuadro de texto sección SHOP*/
+  height: -moz-fit-content;
+  height: fit-content; /* Para que el contenedor se adapte al contenido*/
+  max-height: 380px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 0;
+  /* Mixin- Asigna curvas a las aristas */
+  /*Mixin de Margin y Padding*/
+  margin: 0 0 0 -30px;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .containerIndexShop div .textShopIndex h2 { /* Corrección de valores del h2 global */
+  border-top-right-radius: 30px;
+  width: 100%;
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .containerIndexShop div .textShopIndex div {
+  max-height: 175px; /* Altura máxima de la región scrollable */
+  overflow-y: auto; /* Habilita el scroll vertical si el contenido es mayor que la altura */
+}
+main .containerIndexShop div .textShopIndex div p {
+  /* Fuente y espaciados del texto de SHOP*/
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: larger;
+  /*Mixin de Margin y Padding*/
+  margin: 0 0 20px 0;
+  padding: 5px 10px 0px 50px;
+  /* Mixin- Margin y Padding */
+}
+main .containerIndexShop div .textShopIndex div p span {
+  display: block; /* Para generar saltos de línea en los textos */
+}
+@media screen and (max-width: 990px) {
+  main .containerIndexShop div {
+    /* Comportamiento de los contenedores al ajustar la resolución de pantalla */
+  }
+  main .containerIndexShop div .divShopIndex {
+    /* Ajuste de medidas para que el carrousel se adapte a los contenedores y ocupe toda la pantalla */
+    /*Mixin de Height y Width*/
+    height: auto;
+    width: auto;
+  }
+  main .containerIndexShop div .textShopIndex {
+    width: 75%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* Mixin- Asigna curvas a las aristas */
+    /*Mixin de Margin y Padding*/
+    margin: -30px 0 0 0;
+    padding: 30px 0 0 0;
+    /* Mixin para centrar el contenedor de texto en responsive */
+  }
+  main .containerIndexShop div .textShopIndex h2 { /* Corrección de valores del h2 global */
+    border-top-right-radius: 0px;
+    /*Mixin de Margin y Padding*/
+    margin: -40px 0 0 0;
+    padding: 40px 0 0 0;
+    /* Mixin- Margin y Padding */
+  }
+  main .containerIndexShop div .textShopIndex div p {
+    /*Mixin de Margin y Padding*/
+    margin: 10;
+    padding: 5px 10px 0px 10px;
+    /* Mixin- Margin y Padding */
+  }
+}
+main {
+  /* ----------------------- Sección index/EVENTOS -----------------------*/
+  /* Propiedades del contenedor del carrousel de EVENTOS */
+}
+main .rowIndexEvent {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+main .rowIndexEvent .divEventIndex {
+  /* Propiedades del contenedor del carrousel */
+  /*Mixin de Height y Width*/
+  height: 300px;
+  width: 450px;
+  /* Mixin- Height y Width */
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+  box-shadow: 0px 3px 10px rgba(71, 54, 54, 0.3);
+}
+main .rowIndexEvent .divEventIndex img {
+  max-height: 300px; /* Márgen para la imágen */
+  -o-object-fit: cover;
+     object-fit: cover; /* Para que la imagen ocupe todo el espacio del contenedor */
+}
+main .rowIndexEvent .textEventIndex {
+  /* Propiedades del contenedor del cuadro de texto sección EVENTOS*/
+  height: -moz-fit-content;
+  height: fit-content; /* Para que el contenedor se adapte al contenido*/
+  max-height: 380px; /* Para que se mantenga el estilo al adaptar pantalla */
+  background-color: #f5f5f5;
+  box-shadow: 0px 0px 10px rgba(2, 1, 1, 0.1);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 30px;
+  /* Mixin- Asigna curvas a las aristas */
+  /*Mixin de Margin y Padding*/
+  margin: 0 -40px 0 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .rowIndexEvent .textEventIndex h2 { /* Corrección de valores del h2 global */
+  border-top-left-radius: 30px;
+  width: 100%;
+  /*Mixin de Margin y Padding*/
+  margin: 0;
+  padding: 0;
+  /* Mixin- Margin y Padding */
+}
+main .rowIndexEvent .textEventIndex div { /* Estilos del contenedor de la sección Eventos */
+  max-height: 210px; /* Altura máxima de la región scrollable */
+  overflow-y: auto; /* Habilita el scroll vertical si el contenido es mayor que la altura */
+}
+main .rowIndexEvent .textEventIndex div p {
+  /* Fuente y espaciados del texto de EVENT*/
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: larger;
+  /*Mixin de Margin y Padding*/
+  margin: 10;
+  padding: 5px 50px 0px 10px;
+  /* Mixin- Margin y Padding */
+}
+main .rowIndexEvent .textEventIndex div p span {
+  display: block; /* Para generar saltos de línea en los textos */
+}
+main .rowIndexEvent .textEventIndex div .buttonEnterateMas {
+  /* Propiedades del button extendida */
+  margin: 15px; /* Espaciado entre el botón y el resto */
+}
+main .rowIndexEvent div {
+  border-radius: 30px; /* Asigno bordes circulares al carrousel de EVENTOS*/
+}
+@media screen and (max-width: 990px) {
+  main {
+    /* Comportamiento de los contenedores al ajustar la resolución de pantalla */
+  }
+  main .rowIndexEvent {
+    /* Para que el texto se ubique debajo del carrusel de manera responsive */
+    flex-wrap: wrap-reverse;
+  }
+  main .rowIndexEvent .divEventIndex {
+    /*Mixin de Height y Width*/
+    height: auto;
+    width: auto;
+    /* Mixin- Height y Width */
+  }
+  main .rowIndexEvent .divEventIndex img {
+    max-height: none; /* Corrección de escala para que la img ocupe toda la pantalla */
+  }
+  main .rowIndexEvent .textEventIndex {
+    width: 75%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    /* Mixin- Asigna curvas a las aristas */
+    /*Mixin de Margin y Padding*/
+    margin: -30px 0 0 0;
+    padding: 30px 0 0 0;
+    /* Mixin- Margin y Padding */
+  }
+  main .rowIndexEvent .textEventIndex h2 { /* Corrección de valores del h2 global */
+    /*Mixin de Margin y Padding*/
+    margin: -40px 0 0 0;
+    padding: 40px 0 0 0;
+    /* Mixin- Margin y Padding */
+  }
+  main .rowIndexEvent .textEventIndex div p {
+    /* Para que se acomode el texto cuando se achique la pantalla */
+    /*Mixin de Margin y Padding*/
+    margin: 10;
+    padding: 5px 10px 0px 10px;
+  }
+}
+main {
+  /* ----------------------- Sección fundamentos ----------------------- */
+}
+main .containerImgContainer {
+  background-image: url("../images/indexRun.webp"); /*Imágen de fondo de la seción*/
+  background-size: cover; /* Para cubrir todo el fondo */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+main .containerImgContainer h2 {
+  /* Corrección de valores del h2 global */
+  font-style: italic;
+  /*Mixin de Margin y Padding*/
+  margin: 0 0 80px 0;
+  padding: 6px;
+  /* Mixin- Margin y Padding */
+  color: #3d1b12; /* Cambio el color de la fuente del h2 */
+}
+main .containerImgContainer h2 .smaller-text {
+  /* Ajuste de tamaño de fuente */
+  font-size: 50%;
+}
+main .containerImgContainer .imgContainer {
+  /*Fondo de los logos de fundamentos*/
+  align-items: center;
+  /*Mixin de Margin y Padding*/
+  margin: 100px 0 100px 0;
+  padding: 40px 0 30px 0;
+  /* Mixin- Margin y Padding */
+  background-color: rgba(233, 113, 0, 0.9019607843);
+}
+main .containerImgContainer .imgContainer .mainImage .imgFundamentos {
+  /* Ajuste de tamaño de fuente */
+  margin: 30px 0 10px;
+  max-width: 100%;
+  height: 100px;
+}
+main .containerImgContainer .imgContainer .mainImage p {
+  font-family: "Barlow Condensed", sans-serif;
+  color: #ffe4c4;
+}
+main .containerImgContainer .imgContainer .mainImage span {
+  display: block; /* Para generar saltos de línea en los textos */
+}
+main .containerImgContainer .imgContainer .mainImage .imgFundamentos:active {
+  /* Repite la animación al hacerle click a la imagen */
+  animation: 1s;
+}
+main .containerImgContainer p {
+  margin: 0; /* Ajuste para que se vea un espacio entre el final de la sección y el footer */
+}
+
+/* FIN MAIN */
+/* ----------------------- FIN Sección fundamentos ----------------------- *//*# sourceMappingURL=style.css.map */

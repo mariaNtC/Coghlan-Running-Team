@@ -1,0 +1,105 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+/* ------------------------------- ESTILOS DEL HEADER ------------------------------- */  
+header {
+    nav {
+        .container-fluid {
+            /* Ubicación y propiedades del NAV*/    
+            margin-top: -8px;/* Corrección de desfase*/   
+            background: linear-gradient(to top, $colorPrincipal, $colorPrincipalStrong); 
+            border-bottom: 3px solid $colorSecundario; /* Borde en la parte inferior */
+            box-shadow: $shadowSoft;      
+
+            .navbar-nav {
+                background-color: transparent;
+            }
+            
+            .indexLogoLink{
+                width: 112px;/* Corrección de espaciado entre menú hambruguesa y logo*/ 
+                @include myp(0 0 0 30px, 5px);/* Mixin- Margin y Padding */                               
+                img {
+                    /* Propiedades de la img del logo*/ 
+                    width: 8%;    
+                    min-width: 100px;
+                }
+            }
+            button {
+                /* Propiedades del menú Hamburguesa*/
+                margin: 10px 25px 10px 0px; 
+                color: $colorH ;
+                border: 2px solid rgb(255, 228, 196, 0.5);
+                span {
+                    /* Propiedades de la img dentro del menú Hamburguesa*/
+                    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+                }
+            }            
+                div {
+                    ul {
+                        /* Ubicación y propiedades de las UL del NAV*/
+                        list-style-type: none;    
+                        font-family: "Barlow Condensed", sans-serif; /* Llamo a la fuente importada*/
+                        display: flex;  
+                        text-align: center;
+                        position: fixed;                            
+                        right: 0;
+                        background-color:$colorPrincipal; 
+                       
+                    }
+                        @media screen and (max-width: 991px) {
+                            /* Cuando se habilita el menú hambur. se modifican los estilos de los links del nav*/
+                            ul {
+                            width: 100%;
+                            box-shadow: $shadowMed;
+                            @include borderCreator(0,0,10px,10px);
+                            }
+                                .nav-link.active, .nav-link.show{
+                                    /* Propiedades del texto A del NAV que está ACTIVO*/
+                                    background-color: $colorPrincipalStrong;
+                                    margin: 0px;
+                                }     
+                                                     
+                        }  
+                    
+                        li {
+                            
+                            .nav-link {
+                                /* Propiedades del texto A del NAV*/
+                                color:$colorH;
+                                text-decoration: none;    
+                                font-size: x-large;
+                                margin: 5px 20px;                                
+                            }
+                                .nav-link:hover {
+                                    /* Hover de links del NAV*/
+                                    color:$colorFontHover;
+                                    transition: color 0.5s ease; 
+                                }
+                                .nav-link.active, .nav-link.show{
+                                    /* Propiedades del texto A del NAV que está ACTIVO*/
+                                    text-decoration: overline;
+                                    color: $colorFontActive;
+                                }
+                            /* Propiedades del botón de TIENDA*/
+                            .navTienda {
+                                color: rgb(63, 63, 63);
+                                background-color: rgb(96, 230, 91);                                
+                                @include borderCreator(5px, 5px, 5px ,5px);
+                                                          
+                            }
+                                .navTienda:hover {
+                                    background-color:rgb(138, 247, 134);                                
+                                    color:$colorH;
+                                    transition:  color 0.3s ease; 
+                                }
+                                .navTienda.active, .navTienda.show {
+                                    background-color:rgb(138, 247, 134);
+                                    color:rgba(2, 1, 1, 0.3);
+                                    text-decoration: overline;
+                                    
+                                }
+                        }
+                }
+            }            
+    }    
+}

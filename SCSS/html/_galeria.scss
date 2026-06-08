@@ -1,0 +1,140 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+@import "../abstracts/extends";
+
+/* ------------------------------- ESTILOS DE LA HTML GALERÍA ------------------------------- */  
+main {
+    /*Propiedades de contenedores para pantallas cel*/
+    .containerGaleria {
+        /*Propiedades de los contenedores de galerías*/
+        background-color: transparent;
+        height: auto; 
+        width: 100%;
+            h2 {
+                margin: 50px 0 20px 0;
+                /*Propiedades del contenedor del h2 de las galerías*/
+                background-color: $colorPrincipalStrong;                
+                box-shadow: $shadowSoft;
+                img {
+                    /* Medidas del logo de las galerías*/
+                    height: 70px;
+                    margin: 10px;
+                }
+                .h2TitleGaleria {
+                  /* Propiedades del título del h2 del contenedor de imágenes*/
+                  box-shadow: $shadowSoft;
+                  font-size: medium;
+                  background-color:$colorPrincipal;
+                }                
+            }
+
+        .visibleGaleriaPodios, .visibleGaleriaRunning, .visibleGaleriaTravel {
+            /*Para separar el carrousel del contenedor*/
+            padding: 10px;
+        }
+
+        .containerGaleriaPodios, .containerGaleriaRunning, .containerGaleriaTravel {
+            /*Para que no se vean el resto de la imagenes ademas del carrousel*/
+            display: none;  
+        }
+    }
+}
+
+/*Media query para pantallas tablet */
+@media screen and (min-width: 600px) {  
+
+    main {
+        .containerGaleria {   
+          /*Tamaño del contenedor de img */        
+            height: 700px;  
+                      
+                .visibleGaleriaPodios, .visibleGaleriaRunning, .visibleGaleriaTravel {
+                  /*Invisibiliza el carousel */
+                    display: none;
+                }
+            .containerGaleriaPodios, .containerGaleriaRunning, .containerGaleriaTravel {
+                /* Propiedades de las img */
+                display: grid;
+                height: 50vh;
+                grid-template-columns: repeat (2, 50%);
+                grid-template-rows: 30% 50% 30% 40% 40%; 
+                
+                /* Distribución de las img */
+                  .imgPodios1 {                  
+                    grid-row: span 1;
+                    grid-column:1;
+                  }                
+                  .imgPodios2 {
+                    grid-column: span 2;
+                    grid-row: span 2;
+                  }                
+                  .imgPodios3 {
+                    grid-column: 1;      
+                  }                  
+                  .imgPodios4 {
+                    grid-column: span 2;  
+                    grid-row: span 2;    
+                  }                
+                  .imgPodios7 {
+                    grid-column: span 3;
+                  }
+                  
+                img {
+                    opacity: 90%;
+                    @include hyw(100%,100%);
+                    object-fit: cover;
+                    padding: 10px;
+                    transition: transform 0.3s ease;
+                }  
+                img:hover {
+                  /* Efectos de hover sobre las img */
+                    transform: scale(1.03); /* Escala la imagen ligeramente al pasar el mouse sobre ella */
+                    opacity: 100%;
+                    transition: opacity 0.2s;
+                }  
+            } 
+        }
+    }
+}
+
+/*Media query para pantallas desktop */
+@media screen and (min-width: 1024px) {  
+
+    main {
+        .containerGaleria {   
+          /*Tamaño del contenedor de img */       
+            height: 620px;
+            .visibleGaleriaPodios, .visibleGaleriaRunning, .visibleGaleriaTravel{
+              /*Invisibiliza el carousel */
+                display: none;
+              }
+
+        .containerGaleriaPodios, .containerGaleriaRunning, .containerGaleriaTravel {    
+            display: grid;
+            height: 50vh;
+            grid-template-columns: repeat (3, 25%);
+            grid-template-rows: 40% 60% 50%;
+
+            /* Distribución de las img */
+              .imgPodios1 {
+                grid-row: span 1;
+                grid-column:1;
+              }            
+              .imgPodios2 {
+                grid-column: 2;
+                grid-row: span 2;
+              }            
+              .imgPodios3 {
+                grid-column: 3;      
+              }        
+              .imgPodios4 {
+                grid-column: 3;  
+                grid-row: 3;    
+              }            
+              .imgPodios7 {
+                grid-column: span 2;
+              }    
+        } 
+        }
+    } 
+  }
