@@ -730,7 +730,7 @@ main .containerGaleria .containerGaleriaPodios, main .containerGaleria .containe
 @media screen and (min-width: 600px) {
   main .containerGaleria {
     /*Tamaño del contenedor de img */
-    height: 700px;
+    height: 1000px;
   }
   main .containerGaleria .visibleGaleriaPodios, main .containerGaleria .visibleGaleriaRunning, main .containerGaleria .visibleGaleriaTravel {
     /*Invisibiliza el carousel */
@@ -783,7 +783,7 @@ main .containerGaleria .containerGaleriaPodios, main .containerGaleria .containe
 @media screen and (min-width: 1024px) {
   main .containerGaleria {
     /*Tamaño del contenedor de img */
-    height: 620px;
+    height: 850px;
   }
   main .containerGaleria .visibleGaleriaPodios, main .containerGaleria .visibleGaleriaRunning, main .containerGaleria .visibleGaleriaTravel {
     /*Invisibiliza el carousel */
