@@ -104,6 +104,12 @@ header nav .container-fluid div ul {
     background-color: #e97100;
     margin: 0px;
   }
+  header nav .container-fluid div .nav-item {
+    background-color: #F58700;
+  }
+  header nav .container-fluid div .nav-link.navTienda {
+    margin-bottom: 20px;
+  }
 }
 header nav .container-fluid div li .nav-link {
   /* Propiedades del texto A del NAV*/

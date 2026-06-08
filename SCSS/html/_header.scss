@@ -58,7 +58,12 @@ header {
                                     background-color: $colorPrincipalStrong;
                                     margin: 0px;
                                 }     
-                                                     
+                            .nav-item {
+                                background-color: $colorPrincipal;
+                            }        
+                            .nav-link.navTienda {
+                                margin-bottom: 20px;;
+                            }                 
                         }  
                     
                         li {
@@ -80,6 +85,7 @@ header {
                                     text-decoration: overline;
                                     color: $colorFontActive;
                                 }
+                                
                             /* Propiedades del botón de TIENDA*/
                             .navTienda {
                                 color: rgb(63, 63, 63);
@@ -102,4 +108,8 @@ header {
                 }
             }            
     }    
+}
+@media screen and (max-width: 991px) {
+    
+       
 }
