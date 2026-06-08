@@ -1263,18 +1263,21 @@
     .aside {
         width: 100%; // Para que ocupe toda la pantalla de manera horizontal
         height: auto; // Para que se ajuste la altura al tamaño de las img        
-        padding: 12% 0 3% 0; // Ajuste de padding para que no se superponga con el header          
+        padding: 7% 0 1% 0; // Ajuste de padding para que no se superponga con el header          
         
         .asideBox {                    
             flex-direction: row;  //Iconos ordenados de manera horizontal            
             
             .asideBoxIcon {
-                padding: 0 10%;     
+                padding: 0 10%;   
+               
 
-                .iconAsideBox {            
+                .iconAsideBox {     
+                     font-size: 12px;         
                     .iconImgAsideBox {
-                        height: 100%;
-                        width: 100%;
+                        height: 30px;
+                        
+                        width: 30px;
                     }
                 }        
             }

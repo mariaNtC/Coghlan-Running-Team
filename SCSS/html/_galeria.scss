@@ -5,6 +5,12 @@
 /* ------------------------------- ESTILOS DE LA HTML GALERÍA ------------------------------- */  
 main {
     /*Propiedades de contenedores para pantallas cel*/
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+      background-color: $colorPrincipal;
+      border-radius: 50%;
+      height: 26px;
+      width: 26px;
+    }
     .containerGaleria {
         /*Propiedades de los contenedores de galerías*/
         background-color: transparent;

@@ -700,6 +700,12 @@ main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
 main {
   /*Propiedades de contenedores para pantallas cel*/
 }
+main .carousel-control-prev-icon, main .carousel-control-next-icon {
+  background-color: #F58700;
+  border-radius: 50%;
+  height: 26px;
+  width: 26px;
+}
 main .containerGaleria {
   /*Propiedades de los contenedores de galerías*/
   background-color: transparent;
@@ -1966,7 +1972,7 @@ main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
   .aside {
     width: 100%;
     height: auto;
-    padding: 12% 0 3% 0;
+    padding: 7% 0 1% 0;
   }
   .aside .asideBox {
     flex-direction: row;
@@ -1974,9 +1980,12 @@ main .rowIndexEvent .textEventIndex div .buttonEnterateMas:active {
   .aside .asideBox .asideBoxIcon {
     padding: 0 10%;
   }
+  .aside .asideBox .asideBoxIcon .iconAsideBox {
+    font-size: 12px;
+  }
   .aside .asideBox .asideBoxIcon .iconAsideBox .iconImgAsideBox {
-    height: 100%;
-    width: 100%;
+    height: 30px;
+    width: 30px;
   }
   .mainTienda {
     margin-top: 65%;
