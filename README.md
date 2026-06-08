@@ -48,7 +48,7 @@ Sitio web para el equipo de running **Coghlan Running Team (CRT)**, con tienda o
 
 ## Demo
 
-[Ver demo en vivo](#) <!-- Reemplazar con la URL de GitHub Pages o Netlify -->
+[Ver demo en vivo](#https://mariantc.github.io/Coghlan-Running-Team/) 
 
 ## Autor
 
